@@ -1,1 +1,4 @@
-/home/josueportiz/Documents/josueportiz/sdg2_22-23_private/sdg/projects/retina_api/docs/html/retina_8c.js
+var retina_8c =
+[
+    [ "main", "retina_8c.html#a840291bc02cba5474a4cb46a9b9566fe", null ]
+];
