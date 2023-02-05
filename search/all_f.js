@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['sdg2_87',['SDG2',['../index.html',1,'']]],
-  ['system_5fclock_5fconfig_88',['system_clock_config',['../port__system_8c.html#a58d5ba05020fc08f0c6b6e3fbd32281c',1,'port_system.c']]],
-  ['systemcoreclock_89',['SystemCoreClock',['../port__system_8c.html#aa3cd3e43291e81e795d642b79b6088e6',1,'port_system.c']]],
-  ['systeminit_90',['SystemInit',['../port__system_8c.html#a93f514700ccf00d08dbdcff7f1224eb2',1,'port_system.c']]],
-  ['systick_5fhandler_91',['SysTick_Handler',['../port__system_8c.html#ab5e09814056d617c521549e542639b7e',1,'port_system.c']]]
+  ['rcc_5fhsi_5fcalibration_5fdefault_142',['RCC_HSI_CALIBRATION_DEFAULT',['../port__system_8h.html#a2493eaca64054f112ecca77da42783bc',1,'port_system.h']]],
+  ['retina_2ec_143',['retina.c',['../retina_8c.html',1,'']]],
+  ['retina_2eh_144',['retina.h',['../retina_8h.html',1,'']]]
 ];
