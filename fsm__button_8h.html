@@ -185,7 +185,7 @@ Functions</h2></td></tr>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Initialize the fields <code>debounce_time</code>, <code>button_id</code> of <code>p_fsm</code> with the received values <br  />
 ✅ 2. Initialize the fields <code>tick_pressed</code>, <code>duration</code> of <code>p_fsm</code> with 0 <br  />
-✅ 3. Call function <code>port_button_init</code> </p>
+✅ 3. Call function <code><a class="el" href="port__button_8h.html#a8a60ec4a29c03b384c975a7780082ca3" title="Configure the HW specifications of a given button.">port_button_init()</a></code> </p>
 </blockquote>
 <dl class="section note"><dt>Note</dt><dd>The main program and the <code>port</code> are the only ones that manage and stablish the ID. The button FSM acts as a man-in-the-middle but this library does not handles the button IDs.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -227,9 +227,9 @@ Functions</h2></td></tr>
 
 <p>Create a new button FSM. </p>
 <p>This FSM implements an anti-debounce mechanism. Debounces (or very fast button presses) lasting less than the <code>debounce_time</code> are filtered out.</p>
-<p>The FSM stores the duration of the last button press. The user should ask for it using the function <code>fsm_button_get_duration</code>.</p>
+<p>The FSM stores the duration of the last button press. The user should ask for it using the function <code><a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814" title="Return the duration of the last button press.">fsm_button_get_duration()</a></code>.</p>
 <p>At start and reset, the duration value must be 0 ms. A value of 0 ms means that there has not been a new button press.</p>
-<dl class="section attention"><dt>Attention</dt><dd>The user is required to reset the duration value once it has been read. Otherwise, this value may be misinterpreted by the user, if successive calls are made without having pressed the button. In such a case we would be reading past information. In order to reset the value, the function <code>fsm_button_reset_duration</code> must be called.</dd></dl>
+<dl class="section attention"><dt>Attention</dt><dd>The user is required to reset the duration value once it has been read. Otherwise, this value may be misinterpreted by the user, if successive calls are made without having pressed the button. In such a case we would be reading past information. In order to reset the value, the function <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> must be called.</dd></dl>
 <p>In other words, the status flag of this FSM is the variable duration. A duration of 0 means that there has been no new button press, a value other than 0 represents that it has been pressed and the value is its duration, and thus it is the user's responsibility to clear this state flag.</p>
 <p>The FSM contains Information of the button ID. This ID is a unique identifier that is managed by the user in the <code>port</code>. That is where the user provides identifiers and HW information for all the buttons on his system. The FSM does not have to know anything of the underlying HW.</p>
 <dl class="params"><dt>Parameters</dt><dd>
