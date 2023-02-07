@@ -1,6 +1,6 @@
 var fsm__retina_8c =
 [
-    [ "fsm_retina_t", "structfsm__retina__t.html", null ],
+    [ "fsm_retina_t", "structfsm__retina__t.html", "structfsm__retina__t" ],
     [ "COMMANDS_MEMORY_SIZE", "fsm__retina_8c.html#a1493910690d9420cf8b135851ed55211", null ],
     [ "WAIT_TX", "fsm__retina_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a40343b646b045e2d3029021122dc3460", null ],
     [ "check_short_pressed", "fsm__retina_8c.html#aa252d6804822c94f8c46898a5c70a255", null ],

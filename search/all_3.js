@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['change_5fmode_5fbutton_5ftime_20',['CHANGE_MODE_BUTTON_TIME',['../retina_8h.html#a1d639cee0fd683feda6de5852be50265',1,'retina.h']]],
+  ['change_5fmode_5fbutton_5ftime_20',['CHANGE_MODE_BUTTON_TIME',['../retina_8c.html#a1d639cee0fd683feda6de5852be50265',1,'retina.c']]],
   ['check_5fbutton_5fpressed_21',['check_button_pressed',['../fsm__button_8c.html#a6d7f3b45d7c77e10f69225090bb996bd',1,'fsm_button.c']]],
   ['check_5fbutton_5freleased_22',['check_button_released',['../fsm__button_8c.html#ac5d1e03c9c3646d44585e3eef1e15d78',1,'fsm_button.c']]],
   ['check_5fshort_5fpressed_23',['check_short_pressed',['../fsm__retina_8c.html#aa252d6804822c94f8c46898a5c70a255',1,'fsm_retina.c']]],

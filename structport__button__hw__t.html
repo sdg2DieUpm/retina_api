@@ -82,10 +82,73 @@ $(document).ready(function(){initNavTree('structport__button__hw__t.html',''); i
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
 <div class="title">port_button_hw_t Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Structure to define the HW dependencies of a button.  
+ <a href="structport__button__hw__t.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a18802c2de0bafc6b825655eb60983152"><td class="memItemLeft" align="right" valign="top">GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structport__button__hw__t.html#a18802c2de0bafc6b825655eb60983152">p_port</a></td></tr>
+<tr class="separator:a18802c2de0bafc6b825655eb60983152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0edea41b6b5bfb8014d187e2df3d8f2f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structport__button__hw__t.html#a0edea41b6b5bfb8014d187e2df3d8f2f">pin</a></td></tr>
+<tr class="separator:a0edea41b6b5bfb8014d187e2df3d8f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac294527bf82169781e405b4437d6a018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structport__button__hw__t.html#ac294527bf82169781e405b4437d6a018">flag_pressed</a></td></tr>
+<tr class="separator:ac294527bf82169781e405b4437d6a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure to define the HW dependencies of a button. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="ac294527bf82169781e405b4437d6a018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac294527bf82169781e405b4437d6a018">&#9670;&nbsp;</a></span>flag_pressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool port_button_hw_t::flag_pressed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flag to indicate that the button has been pressed. If it occurs in a rising or falling edge depends on how the function <code>port_button_is_pressed</code> implements it. </p>
+
+</div>
+</div>
+<a id="a18802c2de0bafc6b825655eb60983152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18802c2de0bafc6b825655eb60983152">&#9670;&nbsp;</a></span>p_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GPIO_TypeDef* port_button_hw_t::p_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>GPIO where the button is connected </p>
+
+</div>
+</div>
+<a id="a0edea41b6b5bfb8014d187e2df3d8f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0edea41b6b5bfb8014d187e2df3d8f2f">&#9670;&nbsp;</a></span>pin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t port_button_hw_t::pin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pin/line where the button is connected </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>port/nucleo_stm32f446re/src/<a class="el" href="port__button_8c.html">port_button.c</a></li>
 </ul>

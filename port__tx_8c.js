@@ -10,5 +10,6 @@ var port__tx_8c =
     [ "port_tx_symbol_tmr_stop", "port__tx_8c.html#a8c6b0587aaa809e6dcd656b84065142f", null ],
     [ "port_tx_tmr_get_tick", "port__tx_8c.html#a1054e71acf03ca90cfda88fe13f4c0c5", null ],
     [ "TIM1_UP_TIM10_IRQHandler", "port__tx_8c.html#ad1fd361bc5ad89facee67c76d1ff8dc0", null ],
+    [ "symbol_tick", "port__tx_8c.html#aa9812493200a90cc897575be742f572f", null ],
     [ "transmitters_arr", "port__tx_8c.html#a0e941572bb7245a7bee9e0bf964b981e", null ]
 ];

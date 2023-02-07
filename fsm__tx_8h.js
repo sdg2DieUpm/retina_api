@@ -1,5 +1,7 @@
 var fsm__tx_8h =
 [
+    [ "NEC_PWM_DC", "fsm__tx_8h.html#a870c7c9b799d53488e23aa51e2197447", null ],
+    [ "NEC_PWM_FREQ_HZ", "fsm__tx_8h.html#a7e17a8dce23cfe2ae53bb2d458fd2ce5", null ],
     [ "NEC_TX_EPILOGUE_TICKS_OFF", "fsm__tx_8h.html#a4af4ccc200839eb817a5038f50677339", null ],
     [ "NEC_TX_EPILOGUE_TICKS_ON", "fsm__tx_8h.html#af92fc511a72169422811e1db56515d4b", null ],
     [ "NEC_TX_PROLOGUE_TICKS_OFF", "fsm__tx_8h.html#acdf0dcfdf884909f2ac7e9437f53dbe2", null ],

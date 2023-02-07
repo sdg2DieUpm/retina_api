@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['orig_5fstate_256',['orig_state',['../structfsm__trans__t.html#adc67dd348bb6fc59cb4d59d598747274',1,'fsm_trans_t']]],
-  ['out_257',['out',['../structfsm__trans__t.html#aa14b0ae2ea26e60da884d09f281f7302',1,'fsm_trans_t']]]
+  ['next_5ftimeout_268',['next_timeout',['../structfsm__button__t.html#a2cb938cc094cc3668b120954f69dcaab',1,'fsm_button_t']]]
 ];

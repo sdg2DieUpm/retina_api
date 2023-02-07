@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tick_5fpressed_260',['tick_pressed',['../structfsm__button__t.html#aafa5c3aa3c9af09aa7d0c8e32db6102f',1,'fsm_button_t']]],
-  ['transmitters_5farr_261',['transmitters_arr',['../port__tx_8c.html#a0e941572bb7245a7bee9e0bf964b981e',1,'port_tx.c']]],
-  ['tx_5fid_262',['tx_id',['../structfsm__tx__t.html#a496080cc4ee3dc42174d24ba5fdac985',1,'fsm_tx_t']]]
+  ['symbol_5ftick_276',['symbol_tick',['../port__tx_8c.html#aa9812493200a90cc897575be742f572f',1,'port_tx.c']]],
+  ['systemcoreclock_277',['SystemCoreClock',['../port__system_8c.html#aa3cd3e43291e81e795d642b79b6088e6',1,'port_system.c']]]
 ];

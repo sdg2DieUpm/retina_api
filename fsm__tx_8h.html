@@ -95,7 +95,6 @@ $(document).ready(function(){initNavTree('fsm__tx_8h.html',''); initResizable();
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="fsm_8h.html">fsm.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="commands_8h.html">commands.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -117,6 +116,10 @@ Macros</h2></td></tr>
 <tr class="separator:af92fc511a72169422811e1db56515d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4af4ccc200839eb817a5038f50677339"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8h.html#a4af4ccc200839eb817a5038f50677339">NEC_TX_EPILOGUE_TICKS_OFF</a>&#160;&#160;&#160;3560</td></tr>
 <tr class="separator:a4af4ccc200839eb817a5038f50677339"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e17a8dce23cfe2ae53bb2d458fd2ce5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8h.html#a7e17a8dce23cfe2ae53bb2d458fd2ce5">NEC_PWM_FREQ_HZ</a></td></tr>
+<tr class="separator:a7e17a8dce23cfe2ae53bb2d458fd2ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a870c7c9b799d53488e23aa51e2197447"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8h.html#a870c7c9b799d53488e23aa51e2197447">NEC_PWM_DC</a></td></tr>
+<tr class="separator:a870c7c9b799d53488e23aa51e2197447"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -138,6 +141,36 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Sistemas Digitales II </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-01-01 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a870c7c9b799d53488e23aa51e2197447"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870c7c9b799d53488e23aa51e2197447">&#9670;&nbsp;</a></span>NEC_PWM_DC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEC_PWM_DC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PWM duty cycle 0-1 </p>
+
+</div>
+</div>
+<a id="a7e17a8dce23cfe2ae53bb2d458fd2ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e17a8dce23cfe2ae53bb2d458fd2ce5">&#9670;&nbsp;</a></span>NEC_PWM_FREQ_HZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NEC_PWM_FREQ_HZ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PWM timer frequency in Hz </p>
+
+</div>
+</div>
 <a id="a4af4ccc200839eb817a5038f50677339"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4af4ccc200839eb817a5038f50677339">&#9670;&nbsp;</a></span>NEC_TX_EPILOGUE_TICKS_OFF</h2>
 
@@ -356,7 +389,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The main program and the <code>port</code> are the only ones that manage and stablish the ID. The infrared transmitter FSM acts as a man-in-the-middle but this library does not handles the transmitters IDs.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html">fsm_tx_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html" title="Structure to define the Infrared transmitter FSM.">fsm_tx_t</a></code>. </td></tr>
     <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number </td></tr>
   </table>
   </dd>
@@ -429,7 +462,7 @@ Functions</h2></td></tr>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html">fsm_button_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html" title="Structure to define the Button FSM.">fsm_button_t</a></code>. </td></tr>
     <tr><td class="paramname">code</td><td>Code of the NEC command to be transmitted. </td></tr>
   </table>
   </dd>

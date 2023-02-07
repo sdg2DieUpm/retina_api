@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msticks_254',['msTicks',['../port__system_8c.html#a0a6e5e17fcb15f3922e278025acabfa2',1,'port_system.c']]]
+  ['long_5fbutton_5fpress_5fms_266',['long_button_press_ms',['../structfsm__retina__t.html#aa8c835ab6a19902f587594d3e618be8f',1,'fsm_retina_t']]]
 ];

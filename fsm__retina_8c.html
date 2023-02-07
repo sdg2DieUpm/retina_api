@@ -95,13 +95,15 @@ $(document).ready(function(){initNavTree('fsm__retina_8c.html',''); initResizabl
 
 <p>Retina FSM main file.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="fsm__retina_8h.html">fsm_retina.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="commands_8h.html">commands.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fsm__retina_8h.html">fsm_retina.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fsm__button_8h.html">fsm_button.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fsm__tx_8h.html">fsm_tx.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__retina__t.html">fsm_retina_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to define the Retina FSM.  <a href="structfsm__retina__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -208,7 +210,7 @@ Variables</h2></td></tr>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html">fsm_retina_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,7 +255,7 @@ false </dd></dl>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html">fsm_retina_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -309,10 +311,10 @@ false </dd></dl>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html">fsm_retina_t</a></code>. </td></tr>
-    <tr><td class="paramname">p_fsm_button</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html">fsm_button_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_fsm_button</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html" title="Structure to define the Button FSM.">fsm_button_t</a></code>. </td></tr>
     <tr><td class="paramname">button_press_time_ms</td><td>Duration in ms of the button press to change between transmitter and receiver modes </td></tr>
-    <tr><td class="paramname">p_fsm_tx</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html">fsm_tx_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_fsm_tx</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html" title="Structure to define the Infrared transmitter FSM.">fsm_tx_t</a></code>. </td></tr>
   </table>
   </dd>
 </dl>
