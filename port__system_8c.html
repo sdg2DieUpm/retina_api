@@ -838,10 +838,9 @@ This function enables the AHB1 peripheral clock. After reset, the peripheral clo
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. <b>Increment the System tick counter <code>msTicks</code> in 1 count.</b> <br  />
- &#160;&#160;&#160;&#160;💡 <code>msTicks</code> is a global <code>static</code> variable declared in <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
+&#160;&#160;&#160;&#160;💡 <code>msTicks</code> is a global <code>static</code> variable declared in <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
 </p>
 </blockquote>
-<dl class="section warning"><dt>Warning</dt><dd><b>The variable <code>msTicks</code> must be declared volatile!</b> Just because it is modified in this ISR, in order to avoid <a href="https://en.wikipedia.org/wiki/Race_condition"><em>race conditions</em></a> . <b>Add it to the definition</b> after <em>static</em>. </dd></dl>
 
 </div>
 </div>
@@ -895,7 +894,7 @@ This function enables the AHB1 peripheral clock. After reset, the peripheral clo
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Variable to store millisecond ticks. </p><dl class="section warning"><dt>Warning</dt><dd><b>It must be declared volatile!</b> Just because it is modified in an ISR. <b>Add it to the definition</b> after <em>static</em>. </dd></dl>
+<p>Variable to store millisecond ticks </p>
 
 </div>
 </div>
