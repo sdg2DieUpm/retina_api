@@ -417,7 +417,7 @@ Functions</h2></td></tr>
 <p>This FSM waits until there is <b>a code different than '0x00'</b> in the field <code>code</code> of the FSM struct.</p>
 <p>At start and reset, the code value must be '0x00'. A value of '0x00' means that there is no code to transmit.</p>
 <dl class="section attention"><dt>Attention</dt><dd>The user is required to reset the code value once it has been sent. Otherwise, this value may be misinterpreted by the FSM. In such a case we would be transmitting the code constantly. The function <code><a class="el" href="fsm__tx_8c.html#ab97d48ffb3b35fd18dd72662fd88195f" title="Start the transmission of the received NEC code.">do_tx_start()</a></code> resets it after transmission.</dd></dl>
-<p>The FSM contains information of the transmitter ID. This ID is a unique identifier that is managed by the user in the <code>port</code>. That is where the user provides identifiers and HW information for all the transmitters on his system. The FSM does not have to know anything of the underlying HW.</p>
+<p>The FSM contains Information of the transmitter ID. This ID is a unique identifier that is managed by the user in the <code>port</code>. That is where the user provides identifiers and HW information for all the transmitters on his system. The FSM does not have to know anything of the underlying HW.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number</td></tr>
@@ -457,7 +457,7 @@ Functions</h2></td></tr>
 <p>Set the code given. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Set the field <code>code</code> with the given code if the given code is not equal to '0x00' <br  />
+<p>✅ 1. Set the field <code>code</code> with the given code if it is not equal to '0x00' <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

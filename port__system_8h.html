@@ -182,9 +182,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#a7bc1d118b9ff134fe7f982a52b6a4049">port_system_gpio_write</a> (GPIO_TypeDef *p_port, uint8_t pin, bool value)</td></tr>
 <tr class="memdesc:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a digital value in a GPIO atomically.  <a href="port__system_8h.html#a7bc1d118b9ff134fe7f982a52b6a4049">More...</a><br /></td></tr>
 <tr class="separator:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf3bdd59bb68456d3c8849452f541e87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#acf3bdd59bb68456d3c8849452f541e87">port_gpio_alternate_config</a> (GPIO_TypeDef *p_port, uint8_t pin, uint8_t alternate)</td></tr>
-<tr class="memdesc:acf3bdd59bb68456d3c8849452f541e87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the alternate function of a GPIO.  <a href="port__system_8h.html#acf3bdd59bb68456d3c8849452f541e87">More...</a><br /></td></tr>
-<tr class="separator:acf3bdd59bb68456d3c8849452f541e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="port__system_8c.html" title="File that defines the functions that are related to the access to the specific HW of the microcontrol...">port_system.c</a> file. </p>
@@ -544,58 +541,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="acf3bdd59bb68456d3c8849452f541e87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf3bdd59bb68456d3c8849452f541e87">&#9670;&nbsp;</a></span>port_gpio_alternate_config()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void port_gpio_alternate_config </td>
-          <td>(</td>
-          <td class="paramtype">GPIO_TypeDef *&#160;</td>
-          <td class="paramname"><em>p_port</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>pin</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>alternate</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure the alternate function of a GPIO. </p>
-<blockquote class="doxtable">
-<p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. <b>Set the corresponding bit value of the BSRR register</b> to <em>set</em> or <em>reset</em> the output depending on the given <code>value</code>. <br  />
-&#160;&#160;&#160;&#160;💡 You might use the macros <code>HIGH</code> and <code>LOW</code>. <br  />
-&#160;&#160;&#160;&#160;💡 You might use the <code><a class="el" href="port__system_8h.html#ad8e7767483a0c8f878cab29ad46ec656">BIT_POS_TO_MASK(pin)</a></code> macro. <br  />
-</p>
-</blockquote>
-<dl class="section note"><dt>Note</dt><dd>The AFR register is a 2-element array representing GPIO alternate function high and low registers (<code>GPIOx_AFRH</code> and <code>GPIOx_AFRL</code>) AFRLy: Alternate function selection for port x pin y (y = 0..7) AFRHy: Alternate function selection for port x pin y (y = 8..15)</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p_port</td><td>Port of the GPIO (CMSIS struct like) </td></tr>
-    <tr><td class="paramname">pin</td><td>Pin/line of the GPIO (index from 0 to 15) </td></tr>
-    <tr><td class="paramname">alternate</td><td>Alternate function value according to the corresponding "Alternate Function" table of the datasheet. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="ae6ca17ba9c9d055d442cf1e4a73be046"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6ca17ba9c9d055d442cf1e4a73be046">&#9670;&nbsp;</a></span>port_system_delay_ms()</h2>
 

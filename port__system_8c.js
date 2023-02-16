@@ -1,11 +1,11 @@
 var port__system_8c =
 [
     [ "HSI_VALUE", "port__system_8c.html#aaa8c76e274d0f6dd2cefb5d0b17fbc37", null ],
-    [ "port_gpio_alternate_config", "port__system_8c.html#acf3bdd59bb68456d3c8849452f541e87", null ],
     [ "port_system_delay_ms", "port__system_8c.html#ae6ca17ba9c9d055d442cf1e4a73be046", null ],
     [ "port_system_delay_until_ms", "port__system_8c.html#aea53d22d21120e209983ae0753b35d87", null ],
     [ "port_system_get_millis", "port__system_8c.html#a4195733ffd32da0ab22407284b5a94eb", null ],
     [ "port_system_gpio_config", "port__system_8c.html#aedba1c00f3e11b81226406c03db75c14", null ],
+    [ "port_system_gpio_config_alternate", "port__system_8c.html#a69b13031e799a6a96aa8143cb4432f94", null ],
     [ "port_system_gpio_config_exti", "port__system_8c.html#aaaa8d7afcf0ca35642667612a2dc0b27", null ],
     [ "port_system_gpio_exti_disable", "port__system_8c.html#a57047fe83ed119973a2ee0891e790459", null ],
     [ "port_system_gpio_exti_enable", "port__system_8c.html#a0db5ab1cfb0707984ad278b002fcf7fc", null ],

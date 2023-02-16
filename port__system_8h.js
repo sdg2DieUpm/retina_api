@@ -22,7 +22,6 @@ var port__system_8h =
     [ "TRIGGER_ENABLE_INTERR_REQ", "port__system_8h.html#a913206b89f97752e3fac1ba0b2320aa5", null ],
     [ "TRIGGER_FALLING_EDGE", "port__system_8h.html#a1968e3b27d1799d15d4183db2267d4c4", null ],
     [ "TRIGGER_RISING_EDGE", "port__system_8h.html#ab1f803abb36eac6342cad8854fbc1e10", null ],
-    [ "port_gpio_alternate_config", "port__system_8h.html#acf3bdd59bb68456d3c8849452f541e87", null ],
     [ "port_system_delay_ms", "port__system_8h.html#ae6ca17ba9c9d055d442cf1e4a73be046", null ],
     [ "port_system_delay_until_ms", "port__system_8h.html#aea53d22d21120e209983ae0753b35d87", null ],
     [ "port_system_get_millis", "port__system_8h.html#ab415270cfcefc90ed8b8842da4e3d4c6", null ],
