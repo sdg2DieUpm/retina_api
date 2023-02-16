@@ -194,6 +194,8 @@ static <a class="el" href="structport__tx__hw__t.html">port_tx_hw_t</a>&#160;</t
 <p><b>TO-DO alumnos:</b> <br  />
 <b>PWM timer setup</b></p>
 <p>✅ 1. Enable the clock source of our timer <br  />
+&#160;&#160;&#160;&#160;💡 The timer <code>TIM2</code> is connected to the bus <code>APB1</code>. So, we must use the <code>APB1ENR</code> register (field of <code>RCC</code>). You can check it looking at the Table 1 of the Reference Manual. <br  />
+&#160;&#160;&#160;&#160;💡 You can use the macro <code>RCC_APB1ENR_TIM2EN</code>. <br  />
 ✅ 2. (Optional) Disable the counter (register <code>CR1</code>) and enable the autoreload preaload (register <code>ARPE</code>) <br  />
 ✅ 3. Reset the timer count (register <code>CNT</code>) <br  />
 ✅ 4. Set the value of the autoreload register (register <code>ARR</code>) <br  />
@@ -241,7 +243,9 @@ static <a class="el" href="structport__tx__hw__t.html">port_tx_hw_t</a>&#160;</t
 <p>Configure the symbol timer. This timer sets the tick base as a reference for the symbols of the protocol. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Enable the clock source of our timer <br  />
+<p>✅ 1. Enable the clock source of our timer. <br  />
+&#160;&#160;&#160;&#160;💡 The timer <code>TIM1</code> is connected to the bus <code>APB2</code>. So, we must use the <code>APB2ENR</code> register (field of <code>RCC</code>). You can check it looking at the Table 1 of the Reference Manual. <br  />
+&#160;&#160;&#160;&#160;💡 You can use the macro <code>RCC_APB2ENR_TIM1EN</code>. <br  />
 ✅ 2. (Optional) Disable the counter (register <code>CR1</code>) and enable the autoreload preaload (register <code>ARPE</code>) <br  />
 ✅ 3. Reset the timer count (register <code>CNT</code>) <br  />
 ✅ 4. Set the value of the autoreload register (register <code>ARR</code>) <br  />
