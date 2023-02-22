@@ -99,9 +99,9 @@ $(document).ready(function(){initNavTree('port__system_8h.html',''); initResizab
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad8e7767483a0c8f878cab29ad46ec656"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#ad8e7767483a0c8f878cab29ad46ec656">BIT_POS_TO_MASK</a>(x)&#160;&#160;&#160;(0x01 &lt;&lt; x)</td></tr>
+<tr class="memitem:ad8e7767483a0c8f878cab29ad46ec656"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#ad8e7767483a0c8f878cab29ad46ec656">BIT_POS_TO_MASK</a>(x)&#160;&#160;&#160;(0x01 &lt;&lt; (x))</td></tr>
 <tr class="separator:ad8e7767483a0c8f878cab29ad46ec656"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab10023bfece24287e8d301c535c5eaca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#ab10023bfece24287e8d301c535c5eaca">BASE_MASK_TO_POS</a>(m,  p)&#160;&#160;&#160;(m &lt;&lt; p)</td></tr>
+<tr class="memitem:ab10023bfece24287e8d301c535c5eaca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#ab10023bfece24287e8d301c535c5eaca">BASE_MASK_TO_POS</a>(m,  p)&#160;&#160;&#160;((m) &lt;&lt; (p))</td></tr>
 <tr class="separator:ab10023bfece24287e8d301c535c5eaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a608fbf41a9ceb289d0a8052a7c715a57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#a608fbf41a9ceb289d0a8052a7c715a57">GET_PIN_IRQN</a>(pin)&#160;&#160;&#160;(pin &gt;= 10 ? EXTI15_10_IRQn : (pin &gt;= 5 ? EXTI9_5_IRQn : (EXTI0_IRQn + pin)))</td></tr>
 <tr class="separator:a608fbf41a9ceb289d0a8052a7c715a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +209,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;(m &lt;&lt; p)</td>
+          <td></td><td>&#160;&#160;&#160;((m) &lt;&lt; (p))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -228,7 +228,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;(0x01 &lt;&lt; x)</td>
+          <td>&#160;&#160;&#160;(0x01 &lt;&lt; (x))</td>
         </tr>
       </table>
 </div><div class="memdoc">
