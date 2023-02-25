@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['_5fsend_5fnec_5fburst_195',['_send_NEC_burst',['../fsm__tx_8c.html#a752bdf329ea260dea2ecd761af049836',1,'fsm_tx.c']]],
-  ['_5ftimer_5fpwm_5fsetup_196',['_timer_pwm_setup',['../port__tx_8c.html#a2688ed358487ee0f17cfa855714b8e5b',1,'port_tx.c']]],
-  ['_5ftimer_5fsymbol_5fsetup_197',['_timer_symbol_setup',['../port__tx_8c.html#a81429b61a4e5cde3e587aada2e2e0b4a',1,'port_tx.c']]],
-  ['_5fwait_5ffor_5ftx_5fticks_198',['_wait_for_tx_ticks',['../fsm__tx_8c.html#a4d46bd469eb6da1601f21be6de49b218',1,'fsm_tx.c']]]
+  ['_5fget_5fdiff_5fticks_361',['_get_diff_ticks',['../fsm__rx__nec_8c.html#a41d34b17798262ab95c14141f9be51b1',1,'fsm_rx_nec.c']]],
+  ['_5fprocess_5frgb_5fcode_362',['_process_rgb_code',['../fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079',1,'fsm_retina.c']]],
+  ['_5freset_5fedge_5fticks_5fidx_363',['_reset_edge_ticks_idx',['../port__rx_8c.html#adfc4d3d8a0fc4e918aca2a1b26888642',1,'port_rx.c']]],
+  ['_5fsend_5fnec_5fburst_364',['_send_NEC_burst',['../fsm__tx_8c.html#a752bdf329ea260dea2ecd761af049836',1,'fsm_tx.c']]],
+  ['_5fstore_5fedge_5ftick_365',['_store_edge_tick',['../port__rx_8c.html#ad3fb0b453990403c94881a28727df47b',1,'port_rx.c']]],
+  ['_5ftimer_5fpwm_5fsetup_366',['_timer_pwm_setup',['../port__tx_8c.html#a2688ed358487ee0f17cfa855714b8e5b',1,'port_tx.c']]],
+  ['_5ftimer_5frx_5fsetup_367',['_timer_rx_setup',['../port__rx_8c.html#ada601d2748d08bea6f2e745dba307143',1,'port_rx.c']]],
+  ['_5ftimer_5fsymbol_5fsetup_368',['_timer_symbol_setup',['../port__tx_8c.html#a81429b61a4e5cde3e587aada2e2e0b4a',1,'port_tx.c']]],
+  ['_5fvalue_5fin_5frange_369',['_value_in_range',['../fsm__rx__nec_8c.html#acd945b51ef6927ae34c0c06ee5a3219f',1,'fsm_rx_nec.c']]],
+  ['_5fwait_5ffor_5ftx_5fticks_370',['_wait_for_tx_ticks',['../fsm__tx_8c.html#a4d46bd469eb6da1601f21be6de49b218',1,'fsm_tx.c']]]
 ];

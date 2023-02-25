@@ -99,6 +99,9 @@ $(document).ready(function(){initNavTree('fsm__retina_8c.html',''); initResizabl
 <code>#include &quot;<a class="el" href="fsm__retina_8h.html">fsm_retina.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fsm__button_8h.html">fsm_button.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="fsm__tx_8h.html">fsm_tx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fsm__rx_8h.html">fsm_rx.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="port__rgb_8h.html">port_rgb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="port__system_8h.html">port_system.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -113,24 +116,58 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="fsm__retina_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a40343b646b045e2d3029021122dc3460">WAIT_TX</a> = 0
+<tr class="memitem:a5848938303e25699b5ace927ac68cdcf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcf">FSM_RETINA</a> { <br />
+&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa40343b646b045e2d3029021122dc3460">WAIT_TX</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa7bc7af0ae548dcff8d0bd8eb7e6c8308">WAIT_RX</a>
+<br />
  }</td></tr>
-<tr class="separator:adf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a5848938303e25699b5ace927ac68cdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:aa92912b6265f7b5ea279a89d65672079"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079">_process_rgb_code</a> (uint8_t rgb_id, uint32_t code)</td></tr>
+<tr class="memdesc:aa92912b6265f7b5ea279a89d65672079"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identify the command and light the corresponding color.  <a href="fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079">More...</a><br /></td></tr>
+<tr class="separator:aa92912b6265f7b5ea279a89d65672079"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa252d6804822c94f8c46898a5c70a255"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#aa252d6804822c94f8c46898a5c70a255">check_short_pressed</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:aa252d6804822c94f8c46898a5c70a255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the button has been pressed fast to send a new command.  <a href="fsm__retina_8c.html#aa252d6804822c94f8c46898a5c70a255">More...</a><br /></td></tr>
 <tr class="separator:aa252d6804822c94f8c46898a5c70a255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659bcc80451aef1447a2b9084a8e7b68"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a659bcc80451aef1447a2b9084a8e7b68">check_long_pressed</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a659bcc80451aef1447a2b9084a8e7b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the button has been pressed long to change between transmitter and receiver modes.  <a href="fsm__retina_8c.html#a659bcc80451aef1447a2b9084a8e7b68">More...</a><br /></td></tr>
+<tr class="separator:a659bcc80451aef1447a2b9084a8e7b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27791bcb353fd9bf513cf1fb124a84d5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a27791bcb353fd9bf513cf1fb124a84d5">check_code</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a27791bcb353fd9bf513cf1fb124a84d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there is a new code in the infrared receiver FSM.  <a href="fsm__retina_8c.html#a27791bcb353fd9bf513cf1fb124a84d5">More...</a><br /></td></tr>
+<tr class="separator:a27791bcb353fd9bf513cf1fb124a84d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e569115408f9427a03aad6f4b067bb2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a6e569115408f9427a03aad6f4b067bb2">check_repetition</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a6e569115408f9427a03aad6f4b067bb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there has been a repetition.  <a href="fsm__retina_8c.html#a6e569115408f9427a03aad6f4b067bb2">More...</a><br /></td></tr>
+<tr class="separator:a6e569115408f9427a03aad6f4b067bb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831d11281556c3d19f17da6088ff7fec"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a831d11281556c3d19f17da6088ff7fec">check_error</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a831d11281556c3d19f17da6088ff7fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there it been received an erroneous code.  <a href="fsm__retina_8c.html#a831d11281556c3d19f17da6088ff7fec">More...</a><br /></td></tr>
+<tr class="separator:a831d11281556c3d19f17da6088ff7fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7660e69573bbf3e75ac151864e165b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#ae7660e69573bbf3e75ac151864e165b0">do_send_next_msg</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:ae7660e69573bbf3e75ac151864e165b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit the next code stored in memory after a short button press.  <a href="fsm__retina_8c.html#ae7660e69573bbf3e75ac151864e165b0">More...</a><br /></td></tr>
 <tr class="separator:ae7660e69573bbf3e75ac151864e165b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aeb182cbcce91a7f3efff1aeea46441"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a5aeb182cbcce91a7f3efff1aeea46441">fsm_retina_new</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_button, uint32_t button_press_time, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_tx)</td></tr>
-<tr class="memdesc:a5aeb182cbcce91a7f3efff1aeea46441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new RETINA FSM.  <a href="fsm__retina_8c.html#a5aeb182cbcce91a7f3efff1aeea46441">More...</a><br /></td></tr>
-<tr class="separator:a5aeb182cbcce91a7f3efff1aeea46441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae83d1ef8f6bf3ab54c3ffcb982831295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#ae83d1ef8f6bf3ab54c3ffcb982831295">fsm_retina_init</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_button, uint32_t button_press_time, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_tx)</td></tr>
-<tr class="memdesc:ae83d1ef8f6bf3ab54c3ffcb982831295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the infrared transmitter FSM.  <a href="fsm__retina_8c.html#ae83d1ef8f6bf3ab54c3ffcb982831295">More...</a><br /></td></tr>
-<tr class="separator:ae83d1ef8f6bf3ab54c3ffcb982831295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaadcd4455f8b57c0cd0b3d7fdea7f43"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#adaadcd4455f8b57c0cd0b3d7fdea7f43">do_execute_code</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:adaadcd4455f8b57c0cd0b3d7fdea7f43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actuate according to the code received.  <a href="fsm__retina_8c.html#adaadcd4455f8b57c0cd0b3d7fdea7f43">More...</a><br /></td></tr>
+<tr class="separator:adaadcd4455f8b57c0cd0b3d7fdea7f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa65b37d943170fb5357a1f6de4c4d1f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#afa65b37d943170fb5357a1f6de4c4d1f">do_tx_off_rx_on</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:afa65b37d943170fb5357a1f6de4c4d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch the system to receiver mode.  <a href="fsm__retina_8c.html#afa65b37d943170fb5357a1f6de4c4d1f">More...</a><br /></td></tr>
+<tr class="separator:afa65b37d943170fb5357a1f6de4c4d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1db678242efba8b80d622d06faa27978"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a1db678242efba8b80d622d06faa27978">do_rx_off_tx_on</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a1db678242efba8b80d622d06faa27978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch the system to transmitter mode.  <a href="fsm__retina_8c.html#a1db678242efba8b80d622d06faa27978">More...</a><br /></td></tr>
+<tr class="separator:a1db678242efba8b80d622d06faa27978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d0fd454021efb6078f8daa758ef465"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a06d0fd454021efb6078f8daa758ef465">do_execute_repetition</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a06d0fd454021efb6078f8daa758ef465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actuate accordingly when receiving a repetition.  <a href="fsm__retina_8c.html#a06d0fd454021efb6078f8daa758ef465">More...</a><br /></td></tr>
+<tr class="separator:a06d0fd454021efb6078f8daa758ef465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f95fb7d2a6655ee7897d0506a294994"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a5f95fb7d2a6655ee7897d0506a294994">do_discard_rx_and_reset</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a5f95fb7d2a6655ee7897d0506a294994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard and reset the code of the infrared receiver FSM.  <a href="fsm__retina_8c.html#a5f95fb7d2a6655ee7897d0506a294994">More...</a><br /></td></tr>
+<tr class="separator:a5f95fb7d2a6655ee7897d0506a294994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4ef2b3a0373ab4b75446647ef74640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a0d4ef2b3a0373ab4b75446647ef74640">fsm_retina_new</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_button, uint32_t button_press_time, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_tx, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_rx, uint8_t rgb_id)</td></tr>
+<tr class="memdesc:a0d4ef2b3a0373ab4b75446647ef74640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new RETINA FSM.  <a href="fsm__retina_8c.html#a0d4ef2b3a0373ab4b75446647ef74640">More...</a><br /></td></tr>
+<tr class="separator:a0d4ef2b3a0373ab4b75446647ef74640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f48e93526d839640780ab9fbf699a3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a9f48e93526d839640780ab9fbf699a3b">fsm_retina_init</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_button, uint32_t button_press_time, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_tx, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_rx, uint8_t rgb_id)</td></tr>
+<tr class="memdesc:a9f48e93526d839640780ab9fbf699a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the infrared transmitter FSM.  <a href="fsm__retina_8c.html#a9f48e93526d839640780ab9fbf699a3b">More...</a><br /></td></tr>
+<tr class="separator:a9f48e93526d839640780ab9fbf699a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -159,25 +196,240 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="adf764cbdea00d65edcd07bb9953ad2b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf764cbdea00d65edcd07bb9953ad2b7">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a5848938303e25699b5ace927ac68cdcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5848938303e25699b5ace927ac68cdcf">&#9670;&nbsp;</a></span>FSM_RETINA</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum</td>
+          <td class="memname">enum <a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcf">FSM_RETINA</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a40343b646b045e2d3029021122dc3460"></a>WAIT_TX&#160;</td><td class="fielddoc"><p><b>Single state in Version 2</b>. State to wait in transmission mode </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5848938303e25699b5ace927ac68cdcfa40343b646b045e2d3029021122dc3460"></a>WAIT_TX&#160;</td><td class="fielddoc"><p><b>Single state in Version 2</b>. State to wait in transmission mode </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5848938303e25699b5ace927ac68cdcfa7bc7af0ae548dcff8d0bd8eb7e6c8308"></a>WAIT_RX&#160;</td><td class="fielddoc"><p><b>State added in Version 3</b>. State to wait in reception mode </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aa92912b6265f7b5ea279a89d65672079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92912b6265f7b5ea279a89d65672079">&#9670;&nbsp;</a></span>_process_rgb_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void _process_rgb_code </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rgb_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Identify the command and light the corresponding color. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Identify the color and call function <code><a class="el" href="port__rgb_8h.html#af02a1be116ca3bd0940fd4a3462b49fc" title="Set a color on the RGB LED.">port_rgb_set_color()</a></code>. If the code is unknown, do not change the color of the RGB LED. &#160;&#160;&#160;&#160;💡 The value of each RGB component must be between [0, 255]. <br  />
+&#160;&#160;&#160;&#160;💡 You might use the macros <a class="el" href="port__system_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</a> and <a class="el" href="port__system_8h.html#ab811d8c6ff3a505312d3276590444289">LOW</a> for the basic combinations of the 3 RGB colors. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rgb_id</td><td>RGB LED ID. Must be unique. </td></tr>
+    <tr><td class="paramname">code</td><td>Code parsed that identifies a color. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a27791bcb353fd9bf513cf1fb124a84d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27791bcb353fd9bf513cf1fb124a84d5">&#9670;&nbsp;</a></span>check_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_code </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if there is a new code in the infrared receiver FSM. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__rx_8h.html#a70a47d1ad39f1cb20cb24c214d4fe714" title="Retrieve the code parse (if any)">fsm_rx_get_code()</a></code> and retrieve the code. <br  />
+✅ 2. If the code is not '0x00' store it in the field <code>rx_code</code>. <br  />
+✅ 3. Return the code. The result will be <code>true</code> if the code is not '0x00'. Otherwise, the result will be <code>false</code>. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a831d11281556c3d19f17da6088ff7fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831d11281556c3d19f17da6088ff7fec">&#9670;&nbsp;</a></span>check_error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if there it been received an erroneous code. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__rx_8h.html#a622f72f0c1ffe950ec6c03d4289c279f" title="Retrieve if the the code received is noise (an error), or not.">fsm_rx_get_error_code()</a></code>, retrieve the result, and return it. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a659bcc80451aef1447a2b9084a8e7b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659bcc80451aef1447a2b9084a8e7b68">&#9670;&nbsp;</a></span>check_long_pressed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_long_pressed </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if the button has been pressed long to change between transmitter and receiver modes. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814" title="Return the duration of the last button press.">fsm_button_get_duration()</a></code> and retrieve the duration. <br  />
+✅ 2. Return <code>true</code> if the duration is not '0' and it is higher or equal than the value stored in <code>long_button_press_ms</code>. Otherwise, return <code>false</code>. </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a6e569115408f9427a03aad6f4b067bb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e569115408f9427a03aad6f4b067bb2">&#9670;&nbsp;</a></span>check_repetition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_repetition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if there has been a repetition. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__rx_8h.html#a6f0550564bc52b4b8cdb494f78391994" title="Retrieve if the the code received is a repetition or not.">fsm_rx_get_repetition()</a></code>, retrieve the result, and return it. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
 <a id="aa252d6804822c94f8c46898a5c70a255"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa252d6804822c94f8c46898a5c70a255">&#9670;&nbsp;</a></span>check_short_pressed()</h2>
 
@@ -205,7 +457,7 @@ Variables</h2></td></tr>
 <p>Check if the button has been pressed fast to send a new command. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Call function <code><a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814" title="Return the duration of the last button press.">fsm_button_get_duration()</a></code> and retrieve the duration <br  />
+<p>✅ 1. Call function <code><a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814" title="Return the duration of the last button press.">fsm_button_get_duration()</a></code> and retrieve the duration. <br  />
 ✅ 2. Return <code>true</code> if the duration is not '0' and it is lower than the value stored in <code>long_button_press_ms</code>. Otherwise, return <code>false</code>. </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -217,6 +469,167 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
+
+</div>
+</div>
+<a id="a5f95fb7d2a6655ee7897d0506a294994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f95fb7d2a6655ee7897d0506a294994">&#9670;&nbsp;</a></span>do_discard_rx_and_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_discard_rx_and_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Discard and reset the code of the infrared receiver FSM. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Reset the code of the RX FSM calling the right function. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adaadcd4455f8b57c0cd0b3d7fdea7f43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaadcd4455f8b57c0cd0b3d7fdea7f43">&#9670;&nbsp;</a></span>do_execute_code()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_execute_code </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actuate according to the code received. </p>
+<p>This function can be used to act on the RGB LED or any other hardware.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079" title="Identify the command and light the corresponding color.">_process_rgb_code()</a></code> with the right arguments. <br  />
+✅ 2. Reset the code of the RX FSM calling the right function. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a06d0fd454021efb6078f8daa758ef465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06d0fd454021efb6078f8daa758ef465">&#9670;&nbsp;</a></span>do_execute_repetition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_execute_repetition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Actuate accordingly when receiving a repetition. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. <b>To be defined. There is nothing defined in the basic project of RETINA. You can do whatever you want as an IMPROVEMENT of your project to act when receiving a repetition.</b> <br  />
+✅ 2. Reset the code of the RX FSM calling the right function. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1db678242efba8b80d622d06faa27978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1db678242efba8b80d622d06faa27978">&#9670;&nbsp;</a></span>do_rx_off_tx_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_rx_off_tx_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Switch the system to transmitter mode. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__rx_8h.html#a25eea90db9cb4d85a789d91cfb90ac97" title="Set the status of the infrared receiver (on or off)">fsm_rx_set_rx_status()</a></code> to turn the infrared receiver FSM OFF. <br  />
+✅ 2. Call function <code><a class="el" href="fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079" title="Identify the command and light the corresponding color.">_process_rgb_code()</a></code> or <code><a class="el" href="port__rgb_8h.html#af02a1be116ca3bd0940fd4a3462b49fc" title="Set a color on the RGB LED.">port_rgb_set_color()</a></code> to turn the RGB LED OFF. <br  />
+✅ 3. Reset duration of the button FSM calling the right function. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -247,8 +660,8 @@ false </dd></dl>
 <p>Transmit the next code stored in memory after a short button press. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Call function <code><a class="el" href="fsm__tx_8h.html#a2b5ff29c5e73b66861fc6180f1102da8" title="Set the code given.">fsm_tx_set_code()</a></code> using the right arguments to store the code in the FSM of the transmitter <br  />
-✅ 2. Call function <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> using the right arguments to store the code in the FSM of the transmitter <br  />
+<p>✅ 1. Call function <code><a class="el" href="fsm__tx_8h.html#a2b5ff29c5e73b66861fc6180f1102da8" title="Set the code given.">fsm_tx_set_code()</a></code> using the right arguments to store the code in the FSM of the transmitter. <br  />
+✅ 2. Call function <code><a class="el" href="fsm__button_8h.html#ad72c67d37f009c4b627d12be1d00c25f" title="Reset the duration of the last button press.">fsm_button_reset_duration()</a></code> using the right arguments to store the code in the FSM of the transmitter. <br  />
 ✅ 3. Increase the value of the field <code>tx_codes_index</code>. Keep its value between 0 and <a class="el" href="fsm__retina_8c.html#a1493910690d9420cf8b135851ed55211">COMMANDS_MEMORY_SIZE</a> <br  />
 &#160;&#160;&#160;&#160;💡 You can use the "modulo" operator to make it simpler. <br  />
 </p>
@@ -262,8 +675,49 @@ false </dd></dl>
 
 </div>
 </div>
-<a id="ae83d1ef8f6bf3ab54c3ffcb982831295"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae83d1ef8f6bf3ab54c3ffcb982831295">&#9670;&nbsp;</a></span>fsm_retina_init()</h2>
+<a id="afa65b37d943170fb5357a1f6de4c4d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa65b37d943170fb5357a1f6de4c4d1f">&#9670;&nbsp;</a></span>do_tx_off_rx_on()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_tx_off_rx_on </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Switch the system to receiver mode. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__rx_8h.html#a25eea90db9cb4d85a789d91cfb90ac97" title="Set the status of the infrared receiver (on or off)">fsm_rx_set_rx_status()</a></code> to turn the infrared receiver FSM ON. <br  />
+✅ 2. Call function <code><a class="el" href="fsm__retina_8c.html#aa92912b6265f7b5ea279a89d65672079" title="Identify the command and light the corresponding color.">_process_rgb_code()</a></code> to set the previous color stored in <code>rx_code</code>. <br  />
+✅ 3. Reset duration of the button FSM calling the right function. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9f48e93526d839640780ab9fbf699a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f48e93526d839640780ab9fbf699a3b">&#9670;&nbsp;</a></span>fsm_retina_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +744,19 @@ false </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
-          <td class="paramname"><em>p_fsm_tx</em>&#160;</td>
+          <td class="paramname"><em>p_fsm_tx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_fsm_rx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rgb_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -309,20 +775,29 @@ false </dd></dl>
 ✅ 3. Initialize the field <code>tx_codes_index</code> <br  />
 ✅ 4. Initialize the array <code>tx_codes_arr</code> with the desired commands for RED, GREEN, and BLUE colors. The remotes at the laboratory are encoded by the company <b>Liluco</b>. Use the macros <a class="el" href="commands_8h.html#a9825879b368bac36801c9bc0ec847a19">LIL_RED_BUTTON</a>, <a class="el" href="commands_8h.html#a6a2668181696b4acff50028ff54b0d5e">LIL_GREEN_BUTTON</a>, and <a class="el" href="commands_8h.html#a6261e02d0201ae32d22efdcb6e8e7b92">LIL_BLUE_BUTTON</a> respectively. </p>
 </blockquote>
+<p><br  />
+</p><blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 3</b></p>
+<p>✅ 1. Assign the infrared reception FSM with the received value <br  />
+✅ 2. Initialize the field <code>working_mode</code> to reception mode <br  />
+✅ 3. Initialize the field <code>rx_code</code> to '0x00' </p>
+</blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
     <tr><td class="paramname">p_fsm_button</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html" title="Structure to define the Button FSM.">fsm_button_t</a></code>. </td></tr>
     <tr><td class="paramname">button_press_time_ms</td><td>Duration in ms of the button press to change between transmitter and receiver modes </td></tr>
     <tr><td class="paramname">p_fsm_tx</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html" title="Structure to define the Infrared transmitter FSM.">fsm_tx_t</a></code>. </td></tr>
+    <tr><td class="paramname">p_fsm_rx</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__rx__t.html" title="Structure to define the infrared receiver FSM.">fsm_rx_t</a></code>. <b>Added in Version 3.</b> </td></tr>
+    <tr><td class="paramname">rgb_id</td><td>Unique RGB identifier number. <b>Added in Version 3.</b> </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a5aeb182cbcce91a7f3efff1aeea46441"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aeb182cbcce91a7f3efff1aeea46441">&#9670;&nbsp;</a></span>fsm_retina_new()</h2>
+<a id="a0d4ef2b3a0373ab4b75446647ef74640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4ef2b3a0373ab4b75446647ef74640">&#9670;&nbsp;</a></span>fsm_retina_new()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,7 +818,19 @@ false </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
-          <td class="paramname"><em>p_fsm_tx</em>&#160;</td>
+          <td class="paramname"><em>p_fsm_tx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_fsm_rx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rgb_id</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -367,6 +854,8 @@ false </dd></dl>
     <tr><td class="paramname">p_fsm_button</td><td>User button FSM </td></tr>
     <tr><td class="paramname">button_press_time_ms</td><td>Duration in ms of the button press to change between transmitter and receiver modes. </td></tr>
     <tr><td class="paramname">p_fsm_tx</td><td>Infrared transmitter FSM </td></tr>
+    <tr><td class="paramname">p_fsm_rx</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__rx__t.html" title="Structure to define the infrared receiver FSM.">fsm_rx_t</a></code>. <b>Added in Version 3.</b> </td></tr>
+    <tr><td class="paramname">rgb_id</td><td>Unique RGB identifier number. <b>Added in Version 3.</b> </td></tr>
   </table>
   </dd>
 </dl>
@@ -389,9 +878,16 @@ false </dd></dl>
 
 <p>Array representing the transitions table of the FSM Retina. </p>
 <blockquote class="doxtable">
-<p><b>In Version 2 the FSM Retina only implements one state and it looks like</b>: <br  />
+<p><b>In Version 2 the FSM Retina only implements one state and it is like</b>: <br  />
 </p><div class="image">
 <img src="fsm_retina_v2.png" alt=""/>
+</div>
+ </blockquote>
+<p><br  />
+</p><blockquote class="doxtable">
+<p><b>In Version 3 the FSM Retina is like follows</b>: <br  />
+</p><div class="image">
+<img src="fsm_retina_v3.png" alt=""/>
 </div>
  </blockquote>
 <p><br  />

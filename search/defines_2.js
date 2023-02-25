@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['change_5fmode_5fbutton_5ftime_297',['CHANGE_MODE_BUTTON_TIME',['../retina_8c.html#a1d639cee0fd683feda6de5852be50265',1,'retina.c']]],
-  ['commands_5fmemory_5fsize_298',['COMMANDS_MEMORY_SIZE',['../fsm__retina_8c.html#a1493910690d9420cf8b135851ed55211',1,'fsm_retina.c']]]
+  ['change_5fmode_5fbutton_5ftime_562',['CHANGE_MODE_BUTTON_TIME',['../retina_8c.html#a1d639cee0fd683feda6de5852be50265',1,'retina.c']]],
+  ['commands_5fmemory_5fsize_563',['COMMANDS_MEMORY_SIZE',['../fsm__retina_8c.html#a1493910690d9420cf8b135851ed55211',1,'fsm_retina.c']]]
 ];

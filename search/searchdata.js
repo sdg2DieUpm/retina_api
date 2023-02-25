@@ -4,11 +4,12 @@ var indexSectionsWithContent =
   1: "fp",
   2: "cfpr",
   3: "_cdefmpst",
-  4: "abcdfilmnopst",
+  4: "abcdefilmnoprst",
   5: "f",
-  6: "bw",
-  7: "abcghilnprt",
-  8: "s"
+  6: "f",
+  7: "binow",
+  8: "abcghilnprt",
+  9: "s"
 };
 
 var indexSectionNames =
@@ -19,9 +20,10 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "enumvalues",
-  7: "defines",
-  8: "pages"
+  6: "enums",
+  7: "enumvalues",
+  8: "defines",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -32,8 +34,9 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Typedefs",
-  6: "Enumerator",
-  7: "Macros",
-  8: "Pages"
+  6: "Enumerations",
+  7: "Enumerator",
+  8: "Macros",
+  9: "Pages"
 };
 

@@ -106,9 +106,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a99fb83031ce9923c84392b4e92f956b5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="fsm__tx_8c.html#a99fb83031ce9923c84392b4e92f956b5a40343b646b045e2d3029021122dc3460">WAIT_TX</a>
+<tr class="memitem:ad64511e893efc2a5a2e4ffad3c67aa88"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8c.html#ad64511e893efc2a5a2e4ffad3c67aa88">FSM_TX</a> { <a class="el" href="fsm__tx_8c.html#ad64511e893efc2a5a2e4ffad3c67aa88a40343b646b045e2d3029021122dc3460">WAIT_TX</a>
  }</td></tr>
-<tr class="separator:a99fb83031ce9923c84392b4e92f956b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:ad64511e893efc2a5a2e4ffad3c67aa88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -148,19 +148,19 @@ Variables</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Sistemas Digitales II </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-01-01 </dd></dl>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a99fb83031ce9923c84392b4e92f956b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99fb83031ce9923c84392b4e92f956b5">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="ad64511e893efc2a5a2e4ffad3c67aa88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad64511e893efc2a5a2e4ffad3c67aa88">&#9670;&nbsp;</a></span>FSM_TX</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">anonymous enum</td>
+          <td class="memname">enum <a class="el" href="fsm__tx_8c.html#ad64511e893efc2a5a2e4ffad3c67aa88">FSM_TX</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a40343b646b045e2d3029021122dc3460"></a>WAIT_TX&#160;</td><td class="fielddoc"><p>Unique state of the FSM waiting to receive a code. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad64511e893efc2a5a2e4ffad3c67aa88a40343b646b045e2d3029021122dc3460"></a>WAIT_TX&#160;</td><td class="fielddoc"><p>Unique state of the FSM waiting to receive a code. </p>
 </td></tr>
 </table>
 
@@ -255,7 +255,8 @@ Variables</h2></td></tr>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Get the initial tick from <code><a class="el" href="port__tx_8h.html#a1054e71acf03ca90cfda88fe13f4c0c5" title="Get the count of the symbol ticks.">port_tx_tmr_get_tick()</a></code> <br  />
 ✅ 2. Do nothing while the difference between the current tick and the initial tick is lower than the number of <code>ticks</code> to wait <br  />
-&#160;&#160;&#160;&#160;💡 This function is the equivalent to the <code><a class="el" href="port__system_8h.html#ae6ca17ba9c9d055d442cf1e4a73be046" title="Wait for some milliseconds.">port_system_delay_ms()</a></code> function. </p>
+&#160;&#160;&#160;&#160;💡 This function is the equivalent to the <code><a class="el" href="port__system_8h.html#ae6ca17ba9c9d055d442cf1e4a73be046" title="Wait for some milliseconds.">port_system_delay_ms()</a></code> function. <br  />
+</p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -428,7 +429,7 @@ false </dd></dl>
 <p>This function initializes the default values of the FSM struct and calls to the <code>port</code> to initialize the HW of associated to the given ID.</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Initialize the field <code>tx_id</code> of <code>p_fsm</code> with the received values <br  />
+<p>✅ 1. Initialize the field <code>tx_id</code> of <code>p_fsm</code> with the received value <br  />
 ✅ 2. Initialize the field <code>code</code> of <code>p_fsm</code> with its initial value <br  />
 ✅ 3. Call function <code><a class="el" href="port__tx_8h.html#ac51d84674ffc60774e009d161edfae9c" title="Configure the HW specifications of a given infrared transmitter.">port_tx_init()</a></code> </p>
 </blockquote>
@@ -436,7 +437,7 @@ false </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__tx__t.html" title="Structure to define the Infrared transmitter FSM.">fsm_tx_t</a></code>. </td></tr>
-    <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number </td></tr>
+    <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number. </td></tr>
   </table>
   </dd>
 </dl>
@@ -463,7 +464,7 @@ false </dd></dl>
 <p>This FSM waits until there is <b>a code different than '0x00'</b> in the field <code>code</code> of the FSM struct.</p>
 <p>At start and reset, the code value must be '0x00'. A value of '0x00' means that there is no code to transmit.</p>
 <dl class="section attention"><dt>Attention</dt><dd>The user is required to reset the code value once it has been sent. Otherwise, this value may be misinterpreted by the FSM. In such a case we would be transmitting the code constantly. The function <code><a class="el" href="fsm__tx_8c.html#ab97d48ffb3b35fd18dd72662fd88195f" title="Start the transmission of the received NEC code.">do_tx_start()</a></code> resets it after transmission.</dd></dl>
-<p>The FSM contains Information of the transmitter ID. This ID is a unique identifier that is managed by the user in the <code>port</code>. That is where the user provides identifiers and HW information for all the transmitters on his system. The FSM does not have to know anything of the underlying HW.</p>
+<p>The FSM contains information of the transmitter ID. This ID is a unique identifier that is managed by the user in the <code>port</code>. That is where the user provides identifiers and HW information for all the transmitters on his system. The FSM does not have to know anything of the underlying HW.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number</td></tr>
@@ -503,7 +504,7 @@ false </dd></dl>
 <p>Set the code given. </p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Set the field <code>code</code> with the given code if it is not equal to '0x00' <br  />
+<p>✅ 1. Set the field <code>code</code> with the given code if the given code is not equal to '0x00' <br  />
 </p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>

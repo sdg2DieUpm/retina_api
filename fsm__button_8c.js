@@ -1,10 +1,12 @@
 var fsm__button_8c =
 [
     [ "fsm_button_t", "structfsm__button__t.html", "structfsm__button__t" ],
-    [ "BUTTON_RELEASED", "fsm__button_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba666f5349284be6384467ac357ec7d461", null ],
-    [ "BUTTON_RELEASED_WAIT", "fsm__button_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9a80c0309c6a131641f74f0dea282ddf", null ],
-    [ "BUTTON_PRESSED", "fsm__button_8c.html#a06fc87d81c62e9abb8790b6e5713c55babd19dea9e19d02d7d39464dfdde1e48b", null ],
-    [ "BUTTON_PRESSED_WAIT", "fsm__button_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4145383ff5556588d3da0b1ae267f1c7", null ],
+    [ "FSM_BUTTON", "fsm__button_8c.html#acd7caaebd935f2c31359e79110f682b6", [
+      [ "BUTTON_RELEASED", "fsm__button_8c.html#acd7caaebd935f2c31359e79110f682b6a666f5349284be6384467ac357ec7d461", null ],
+      [ "BUTTON_RELEASED_WAIT", "fsm__button_8c.html#acd7caaebd935f2c31359e79110f682b6a9a80c0309c6a131641f74f0dea282ddf", null ],
+      [ "BUTTON_PRESSED", "fsm__button_8c.html#acd7caaebd935f2c31359e79110f682b6abd19dea9e19d02d7d39464dfdde1e48b", null ],
+      [ "BUTTON_PRESSED_WAIT", "fsm__button_8c.html#acd7caaebd935f2c31359e79110f682b6a4145383ff5556588d3da0b1ae267f1c7", null ]
+    ] ],
     [ "check_button_pressed", "fsm__button_8c.html#a6d7f3b45d7c77e10f69225090bb996bd", null ],
     [ "check_button_released", "fsm__button_8c.html#ac5d1e03c9c3646d44585e3eef1e15d78", null ],
     [ "check_timeout", "fsm__button_8c.html#ad6f02469ecb017e449a64fffc2feea43", null ],

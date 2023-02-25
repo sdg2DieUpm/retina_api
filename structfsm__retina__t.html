@@ -106,6 +106,12 @@ Data Fields</h2></td></tr>
 <tr class="separator:a936a96aec7f2b73cff83c1bedd067a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d1dd43a97726e46d19b7de11ef8bf3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__retina__t.html#a40d1dd43a97726e46d19b7de11ef8bf3">tx_codes_index</a></td></tr>
 <tr class="separator:a40d1dd43a97726e46d19b7de11ef8bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c53973cae77633f2b6f4c86ed071660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__retina__t.html#a2c53973cae77633f2b6f4c86ed071660">p_fsm_rx</a></td></tr>
+<tr class="separator:a2c53973cae77633f2b6f4c86ed071660"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b49cacefeb235c9beba17311969661b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__retina__t.html#a9b49cacefeb235c9beba17311969661b">rx_code</a></td></tr>
+<tr class="separator:a9b49cacefeb235c9beba17311969661b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66687abd4fd5dede4f1b5f771cace054"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfsm__retina__t.html#a66687abd4fd5dede4f1b5f771cace054">rgb_id</a></td></tr>
+<tr class="separator:a66687abd4fd5dede4f1b5f771cace054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure to define the Retina FSM. </p>
@@ -156,6 +162,21 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a2c53973cae77633f2b6f4c86ed071660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c53973cae77633f2b6f4c86ed071660">&#9670;&nbsp;</a></span>p_fsm_rx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfsm__t.html">fsm_t</a>* fsm_retina_t::p_fsm_rx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the FSM of the infrared receiver </p>
+
+</div>
+</div>
 <a id="a63fd7f85b739dc329737bd9c2a6aa32e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63fd7f85b739dc329737bd9c2a6aa32e">&#9670;&nbsp;</a></span>p_fsm_tx</h2>
 
@@ -168,6 +189,37 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Pointer to the FSM of the infrared transmitter </p>
+
+</div>
+</div>
+<a id="a66687abd4fd5dede4f1b5f771cace054"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66687abd4fd5dede4f1b5f771cace054">&#9670;&nbsp;</a></span>rgb_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t fsm_retina_t::rgb_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Unique RGB LED Identifier <br  />
+ </p>
+
+</div>
+</div>
+<a id="a9b49cacefeb235c9beba17311969661b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b49cacefeb235c9beba17311969661b">&#9670;&nbsp;</a></span>rx_code</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fsm_retina_t::rx_code</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Code received to be processed </p>
 
 </div>
 </div>
