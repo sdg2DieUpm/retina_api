@@ -130,6 +130,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8345283baebe4201a8d28384880fd105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8c.html#a8345283baebe4201a8d28384880fd105">fsm_send_NEC_code</a> (uint8_t tx_id, uint32_t code)</td></tr>
 <tr class="memdesc:a8345283baebe4201a8d28384880fd105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the process to transmit the code stored.  <a href="fsm__tx_8c.html#a8345283baebe4201a8d28384880fd105">More...</a><br /></td></tr>
 <tr class="separator:a8345283baebe4201a8d28384880fd105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22a966071815b96ca4761b99280d558"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8c.html#ab22a966071815b96ca4761b99280d558">fsm_tx_check_activity</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:ab22a966071815b96ca4761b99280d558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the transmitter FSM is active, or not. As the system is the one controlling the output (PWM and symbol timer), this FSM will always be inactive and will wake up at each interruption of the symbol timer or PWM timer.  <a href="fsm__tx_8c.html#ab22a966071815b96ca4761b99280d558">More...</a><br /></td></tr>
+<tr class="separator:ab22a966071815b96ca4761b99280d558"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af495cd84ebd2efbd1420c458f34699b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__tx_8c.html#af495cd84ebd2efbd1420c458f34699b9">fsm_tx_new</a> (uint8_t tx_id)</td></tr>
 <tr class="memdesc:af495cd84ebd2efbd1420c458f34699b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new infrared transmitter FSM.  <a href="fsm__tx_8c.html#af495cd84ebd2efbd1420c458f34699b9">More...</a><br /></td></tr>
 <tr class="separator:af495cd84ebd2efbd1420c458f34699b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,7 +344,7 @@ false </dd></dl>
 </p>
 </blockquote>
 <dl class="section note"><dt>Note</dt><dd>The function <code><a class="el" href="fsm__tx_8c.html#a8345283baebe4201a8d28384880fd105" title="Start the process to transmit the code stored.">fsm_send_NEC_code()</a></code> will lead to a sequence of function calls to <code>PORT</code> and <code>COMMON</code>. The call graph is depicted in the figure below. Alternatively to this implementation, this sequence could be also implemented as part of the FSM of the transmitter, which could be an improvement of your project as well. <br  />
- <div class="image">
+<div class="image">
 <img src="tx_functions_call_graph.png" alt=""/>
 </div>
 </dd></dl>
@@ -396,6 +399,44 @@ false </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ab22a966071815b96ca4761b99280d558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22a966071815b96ca4761b99280d558">&#9670;&nbsp;</a></span>fsm_tx_check_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fsm_tx_check_activity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the transmitter FSM is active, or not. As the system is the one controlling the output (PWM and symbol timer), this FSM will always be inactive and will wake up at each interruption of the symbol timer or PWM timer. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Return <code>false</code>. <br  />
+ </p>
+</blockquote>
+<dl class="section attention"><dt>Attention</dt><dd><b>If you do not use the input argument the compiler fails giving an error of "unused variable".</b> You might use this variable in many ways in order to return <code>false</code>. It is up to you how you do it. <br  />
+&#160;&#160;&#160;&#160;💡 <em>e.g.</em> you can check that the current state of the FSM <b>is not</b> <code>WAIT_TX</code> (this will return false because the FSM is always in this state). <br  />
+&#160;&#160;&#160;&#160;💡 <em>e.g.</em> you can create a new field in the FSM struct to indicate the status (which will be always <code>false</code>), and then return this value. <br  />
+&#160;&#160;&#160;&#160;💡 ...</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__rx__t.html" title="Structure to define the infrared receiver FSM.">fsm_rx_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

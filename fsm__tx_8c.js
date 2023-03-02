@@ -9,6 +9,7 @@ var fsm__tx_8c =
     [ "check_tx_start", "fsm__tx_8c.html#a2e94eaff8ec6283be044f872d2d0f533", null ],
     [ "do_tx_start", "fsm__tx_8c.html#ab97d48ffb3b35fd18dd72662fd88195f", null ],
     [ "fsm_send_NEC_code", "fsm__tx_8c.html#a8345283baebe4201a8d28384880fd105", null ],
+    [ "fsm_tx_check_activity", "fsm__tx_8c.html#ab22a966071815b96ca4761b99280d558", null ],
     [ "fsm_tx_init", "fsm__tx_8c.html#ab6e752ce58e13cce38506f4a86fc229b", null ],
     [ "fsm_tx_new", "fsm__tx_8c.html#af495cd84ebd2efbd1420c458f34699b9", null ],
     [ "fsm_tx_set_code", "fsm__tx_8c.html#a2b5ff29c5e73b66861fc6180f1102da8", null ],

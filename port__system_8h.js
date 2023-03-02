@@ -33,5 +33,9 @@ var port__system_8h =
     [ "port_system_gpio_read", "port__system_8h.html#a67c2ddb6c83b821abe663b86bc76a08e", null ],
     [ "port_system_gpio_toggle", "port__system_8h.html#ac917b3dece5f90ce4c76aaa36cec3553", null ],
     [ "port_system_gpio_write", "port__system_8h.html#a7bc1d118b9ff134fe7f982a52b6a4049", null ],
-    [ "port_system_init", "port__system_8h.html#ae02ed4f544f54b1cdd88448a9eecb9cb", null ]
+    [ "port_system_init", "port__system_8h.html#ae02ed4f544f54b1cdd88448a9eecb9cb", null ],
+    [ "port_system_power_stop", "port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2", null ],
+    [ "port_system_sleep", "port__system_8h.html#ae3c6ff19d65f5cdeb1e1b556b0823b40", null ],
+    [ "port_system_systick_resume", "port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8", null ],
+    [ "port_system_systick_suspend", "port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f", null ]
 ];

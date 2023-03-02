@@ -182,6 +182,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#a7bc1d118b9ff134fe7f982a52b6a4049">port_system_gpio_write</a> (GPIO_TypeDef *p_port, uint8_t pin, bool value)</td></tr>
 <tr class="memdesc:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a digital value in a GPIO atomically.  <a href="port__system_8h.html#a7bc1d118b9ff134fe7f982a52b6a4049">More...</a><br /></td></tr>
 <tr class="separator:a7bc1d118b9ff134fe7f982a52b6a4049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba4258bf8d3fa567f2bb0d6c43029a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a> (void)</td></tr>
+<tr class="memdesc:a9ba4258bf8d3fa567f2bb0d6c43029a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system in <b>stop mode</b> for low power consumption.  <a href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">More...</a><br /></td></tr>
+<tr class="separator:a9ba4258bf8d3fa567f2bb0d6c43029a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3c6ff19d65f5cdeb1e1b556b0823b40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#ae3c6ff19d65f5cdeb1e1b556b0823b40">port_system_sleep</a> (void)</td></tr>
+<tr class="memdesc:ae3c6ff19d65f5cdeb1e1b556b0823b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable low power consumption in sleep mode.  <a href="port__system_8h.html#ae3c6ff19d65f5cdeb1e1b556b0823b40">More...</a><br /></td></tr>
+<tr class="separator:ae3c6ff19d65f5cdeb1e1b556b0823b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dca6b2c8ee48c36828b323f42c47fc8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a> (void)</td></tr>
+<tr class="memdesc:a2dca6b2c8ee48c36828b323f42c47fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resume Tick increment.  <a href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">More...</a><br /></td></tr>
+<tr class="separator:a2dca6b2c8ee48c36828b323f42c47fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3c45ccd0a549c3d753b752b726a795f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a> (void)</td></tr>
+<tr class="memdesc:af3c45ccd0a549c3d753b752b726a795f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend Tick increment.  <a href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">More...</a><br /></td></tr>
+<tr class="separator:af3c45ccd0a549c3d753b752b726a795f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header for <a class="el" href="port__system_8c.html" title="File that defines the functions that are related to the access to the specific HW of the microcontrol...">port_system.c</a> file. </p>
@@ -1145,8 +1157,133 @@ AFRHy: Alternate function selection for port x pin y (y = 8..15)</dd></dl>
 
 </div>
 </div>
+<a id="a9ba4258bf8d3fa567f2bb0d6c43029a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba4258bf8d3fa567f2bb0d6c43029a2">&#9670;&nbsp;</a></span>port_system_power_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_system_power_stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the system in <b>stop mode</b> for low power consumption. </p>
+<p>The function sets the state of the power regulator in <b>stop mode</b>. <br  />
+After that, the function sets the system mode in sleep mode, to enter in <b>stop mode</b> when calling <code>_WFI()</code> (wait for interruption). <br  />
+The system remains in this line until an external interruption or timer interruption occurs. <br  />
+If an interruption occurs the system wakes up and resets the system mode.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Copy the following code in the file <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
+</p>
+</blockquote>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a>()</div>
+<div class="line">{</div>
+<div class="line"> MODIFY_REG(PWR-&gt;CR, (PWR_CR_PDDS | PWR_CR_LPDS), PWR_CR_LPDS);   <span class="comment">// Select the regulator state in Stop mode: Set PDDS and LPDS bits according to PWR_Regulator value</span></div>
+<div class="line">  SCB-&gt;SCR |= ((uint32_t)SCB_SCR_SLEEPDEEP_Msk);   <span class="comment">// Set SLEEPDEEP bit of Cortex System Control Register</span></div>
+<div class="line"> __WFI(); <span class="comment">// Select Stop mode entry : Request Wait For Interrupt</span></div>
+<div class="line"> SCB-&gt;SCR &amp;= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk); <span class="comment">// Reset SLEEPDEEP bit of Cortex System Control Register</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ae3c6ff19d65f5cdeb1e1b556b0823b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c6ff19d65f5cdeb1e1b556b0823b40">&#9670;&nbsp;</a></span>port_system_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_system_sleep </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable low power consumption in sleep mode. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f" title="Suspend Tick increment.">port_system_systick_suspend()</a></code> to suspend the count of the SysTick. <br  />
+✅ 2. Call function <code><a class="el" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2" title="Set the system in stop mode for low power consumption.">port_system_power_stop()</a></code> to enter sleep in <b>stop mode</b>. <br  />
+ </p>
+</blockquote>
+
+</div>
+</div>
+<a id="a2dca6b2c8ee48c36828b323f42c47fc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dca6b2c8ee48c36828b323f42c47fc8">&#9670;&nbsp;</a></span>port_system_systick_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_system_systick_resume </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resume Tick increment. </p>
+<p>The SysTick timer is the source of time base. It is used to generate interrupts at regular time intervals. Once this function is called, the SysTick interrupt will be enabled and so Tick increment is resumed.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Copy the following code in the file <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
+</p>
+</blockquote>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a>()</div>
+<div class="line">{</div>
+<div class="line">  SysTick-&gt;CTRL |= SysTick_CTRL_TICKINT_Msk;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="af3c45ccd0a549c3d753b752b726a795f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3c45ccd0a549c3d753b752b726a795f">&#9670;&nbsp;</a></span>port_system_systick_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_system_systick_suspend </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suspend Tick increment. </p>
+<p>The SysTick timer is the source of time base. It is used to generate interrupts at regular time intervals. Once this function is called, the SysTick interrupt will be disabled so it saves more energy and it does not generate any interruption.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Copy the following code in the file <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
+</p>
+</blockquote>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a>()</div>
+<div class="line">{</div>
+<div class="line"> SysTick-&gt;CTRL &amp;= ~SysTick_CTRL_TICKINT_Msk;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aport__system_8h_html_af3c45ccd0a549c3d753b752b726a795f"><div class="ttname"><a href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a></div><div class="ttdeci">void port_system_systick_suspend(void)</div><div class="ttdoc">Suspend Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:176</div></div>
+<div class="ttc" id="aport__system_8h_html_a9ba4258bf8d3fa567f2bb0d6c43029a2"><div class="ttname"><a href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a></div><div class="ttdeci">void port_system_power_stop(void)</div><div class="ttdoc">Set the system in stop mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:122</div></div>
+<div class="ttc" id="aport__system_8h_html_a2dca6b2c8ee48c36828b323f42c47fc8"><div class="ttname"><a href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a></div><div class="ttdeci">void port_system_systick_resume(void)</div><div class="ttdoc">Resume Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:171</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

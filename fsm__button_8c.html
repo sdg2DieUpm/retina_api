@@ -140,6 +140,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad72c67d37f009c4b627d12be1d00c25f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__button_8c.html#ad72c67d37f009c4b627d12be1d00c25f">fsm_button_reset_duration</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:ad72c67d37f009c4b627d12be1d00c25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the duration of the last button press.  <a href="fsm__button_8c.html#ad72c67d37f009c4b627d12be1d00c25f">More...</a><br /></td></tr>
 <tr class="separator:ad72c67d37f009c4b627d12be1d00c25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af21f21b549567572df95fbe18f29b57c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__button_8c.html#af21f21b549567572df95fbe18f29b57c">fsm_button_check_activity</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:af21f21b549567572df95fbe18f29b57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the button FSM is active, or not.  <a href="fsm__button_8c.html#af21f21b549567572df95fbe18f29b57c">More...</a><br /></td></tr>
+<tr class="separator:af21f21b549567572df95fbe18f29b57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf704fc576ceb5a46854212403aae389"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__button_8c.html#acf704fc576ceb5a46854212403aae389">fsm_button_new</a> (uint32_t debounce_time, uint32_t button_id)</td></tr>
 <tr class="memdesc:acf704fc576ceb5a46854212403aae389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new button FSM.  <a href="fsm__button_8c.html#acf704fc576ceb5a46854212403aae389">More...</a><br /></td></tr>
 <tr class="separator:acf704fc576ceb5a46854212403aae389"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -389,6 +392,42 @@ false </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af21f21b549567572df95fbe18f29b57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af21f21b549567572df95fbe18f29b57c">&#9670;&nbsp;</a></span>fsm_button_check_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fsm_button_check_activity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the button FSM is active, or not. </p>
+<p>The button is inactive when it is in the status <code>BUTTON_RELEASED</code>.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Get the field <code>current_state</code> of the FSM (field <code>f</code> of the struct). <br  />
+✅ 2. Return <code>false</code> if the current state is <code>BUTTON_RELEASED</code>. Otherwise, return <code>true</code>. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__button__t.html" title="Structure to define the Button FSM.">fsm_button_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

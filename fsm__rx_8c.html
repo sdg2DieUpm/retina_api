@@ -160,6 +160,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ab9e467113aea7c2f6085f2d1abd0aec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__rx_8c.html#ab9e467113aea7c2f6085f2d1abd0aec3">fsm_rx_reset_code</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:ab9e467113aea7c2f6085f2d1abd0aec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the code and reception status values.  <a href="fsm__rx_8c.html#ab9e467113aea7c2f6085f2d1abd0aec3">More...</a><br /></td></tr>
 <tr class="separator:ab9e467113aea7c2f6085f2d1abd0aec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2f770018dfb0d38c2bb0b1978412457"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__rx_8c.html#ac2f770018dfb0d38c2bb0b1978412457">fsm_rx_check_activity</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:ac2f770018dfb0d38c2bb0b1978412457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the receiver FSM is active, or not.  <a href="fsm__rx_8c.html#ac2f770018dfb0d38c2bb0b1978412457">More...</a><br /></td></tr>
+<tr class="separator:ac2f770018dfb0d38c2bb0b1978412457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeebcdf1903f9f3a56f4c2e7ce8fa5cad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__rx_8c.html#aeebcdf1903f9f3a56f4c2e7ce8fa5cad">fsm_rx_new</a> (uint8_t rx_id)</td></tr>
 <tr class="memdesc:aeebcdf1903f9f3a56f4c2e7ce8fa5cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new infrared receiver FSM.  <a href="fsm__rx_8c.html#aeebcdf1903f9f3a56f4c2e7ce8fa5cad">More...</a><br /></td></tr>
 <tr class="separator:aeebcdf1903f9f3a56f4c2e7ce8fa5cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -536,6 +539,42 @@ false </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ac2f770018dfb0d38c2bb0b1978412457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f770018dfb0d38c2bb0b1978412457">&#9670;&nbsp;</a></span>fsm_rx_check_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool fsm_rx_check_activity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the receiver FSM is active, or not. </p>
+<p>The receiver is active when it is in the status <code>WAIT_RX</code> because it in the middle of a reception.</p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Get the field <code>current_state</code> of the FSM (field <code>f</code> of the struct). <br  />
+✅ 2. Return <code>true</code> if the current state is <code>WAIT_RX</code>. Otherwise, return <code>false</code>. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__rx__t.html" title="Structure to define the infrared receiver FSM.">fsm_rx_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

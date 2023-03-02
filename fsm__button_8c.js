@@ -12,6 +12,7 @@ var fsm__button_8c =
     [ "check_timeout", "fsm__button_8c.html#ad6f02469ecb017e449a64fffc2feea43", null ],
     [ "do_set_duration", "fsm__button_8c.html#afb3caa779f91f008bb89a419921ab83c", null ],
     [ "do_store_tick_pressed", "fsm__button_8c.html#a408606e4da6d7f5578eaa4c55586bac4", null ],
+    [ "fsm_button_check_activity", "fsm__button_8c.html#af21f21b549567572df95fbe18f29b57c", null ],
     [ "fsm_button_get_duration", "fsm__button_8c.html#adf1e6388ab7f1216269fe912a11cf814", null ],
     [ "fsm_button_init", "fsm__button_8c.html#a3478c3cda06d0305998a6042ea652604", null ],
     [ "fsm_button_new", "fsm__button_8c.html#acf704fc576ceb5a46854212403aae389", null ],

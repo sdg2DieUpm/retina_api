@@ -291,8 +291,8 @@ static <a class="el" href="structport__rx__hw__t.html">port_rx_hw_t</a>&#160;</t
 <p><b>TO-DO alumnos</b></p>
 <p>✅ 1. Clean the corresponding bit of the <code>PR</code> register. Use the <a class="el" href="port__rx_8h.html#afd9f3afa90aff70cfe1703193fa9e1fe">IR_RX_0_ID</a> index to get the port and pin from the <code>receivers_arr</code>. <br  />
 &#160;&#160;&#160;&#160;💡 Recommendation: use the macro <a class="el" href="port__system_8h.html#ad8e7767483a0c8f878cab29ad46ec656">BIT_POS_TO_MASK</a> <br  />
- &#160;&#160;&#160;&#160;💡 <b>To clean an interrupt in the <em>Pending Register</em> (<code>PR</code>) we must write '1' in the corresponding bit</b>. <em>Look at the example in section "3.9.7. Ejemplo de interrupción externa" of the reference book.</em> You can also find this out by consulting the <em>reference manual</em> (section "10.3.6 Pending register (EXTI_PR)") * <br  />
- ✅ 2. Call function <code><a class="el" href="port__rx_8c.html#ad3fb0b453990403c94881a28727df47b" title="Store the time tick of the last edge detected. This function is called by the ISR after an interrupti...">_store_edge_tick()</a></code> to store the time tick for the given infrared receiver. <br  />
+&#160;&#160;&#160;&#160;💡 <b>To clean an interrupt in the <em>Pending Register</em> (<code>PR</code>) we must write '1' in the corresponding bit</b>. <em>Look at the example in section "3.9.7. Ejemplo de interrupción externa" of the reference book.</em> You can also find this out by consulting the <em>reference manual</em> (section "10.3.6 Pending register (EXTI_PR)") * <br  />
+✅ 2. Call function <code><a class="el" href="port__rx_8c.html#ad3fb0b453990403c94881a28727df47b" title="Store the time tick of the last edge detected. This function is called by the ISR after an interrupti...">_store_edge_tick()</a></code> to store the time tick for the given infrared receiver. <br  />
 </p>
 </blockquote>
 

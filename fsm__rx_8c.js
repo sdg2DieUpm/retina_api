@@ -14,6 +14,7 @@ var fsm__rx_8c =
     [ "do_rx_stop", "fsm__rx_8c.html#a4a380735f5155c42b0cc347395b50af5", null ],
     [ "do_store_data", "fsm__rx_8c.html#a8374b901eccab8dd49dbfbec8af58aa1", null ],
     [ "do_update_len_and_timeout", "fsm__rx_8c.html#a278d4fe405d1f0c4ebc5bc69fd77261c", null ],
+    [ "fsm_rx_check_activity", "fsm__rx_8c.html#ac2f770018dfb0d38c2bb0b1978412457", null ],
     [ "fsm_rx_get_code", "fsm__rx_8c.html#a70a47d1ad39f1cb20cb24c214d4fe714", null ],
     [ "fsm_rx_get_error_code", "fsm__rx_8c.html#a622f72f0c1ffe950ec6c03d4289c279f", null ],
     [ "fsm_rx_get_repetition", "fsm__rx_8c.html#a6f0550564bc52b4b8cdb494f78391994", null ],

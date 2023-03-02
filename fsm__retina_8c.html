@@ -119,7 +119,11 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a5848938303e25699b5ace927ac68cdcf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcf">FSM_RETINA</a> { <br />
 &#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa40343b646b045e2d3029021122dc3460">WAIT_TX</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa7bc7af0ae548dcff8d0bd8eb7e6c8308">WAIT_RX</a>
+&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa7bc7af0ae548dcff8d0bd8eb7e6c8308">WAIT_RX</a>, 
+<br />
+&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa1ed7efe6469eb2a449a2ff9d22f6fc9e">SLEEP_TX</a>, 
+<br />
+&#160;&#160;<a class="el" href="fsm__retina_8c.html#a5848938303e25699b5ace927ac68cdcfa23afc23f75cb4a787e0ed942ed2ee6f8">SLEEP_RX</a>
 <br />
  }</td></tr>
 <tr class="separator:a5848938303e25699b5ace927ac68cdcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,6 +148,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a831d11281556c3d19f17da6088ff7fec"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a831d11281556c3d19f17da6088ff7fec">check_error</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:a831d11281556c3d19f17da6088ff7fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if there it been received an erroneous code.  <a href="fsm__retina_8c.html#a831d11281556c3d19f17da6088ff7fec">More...</a><br /></td></tr>
 <tr class="separator:a831d11281556c3d19f17da6088ff7fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91c31f180f16c2d66ef56e62004c83bc"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a91c31f180f16c2d66ef56e62004c83bc">check_activity</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a91c31f180f16c2d66ef56e62004c83bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any of the elements of the system is active.  <a href="fsm__retina_8c.html#a91c31f180f16c2d66ef56e62004c83bc">More...</a><br /></td></tr>
+<tr class="separator:a91c31f180f16c2d66ef56e62004c83bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05439bd432881a570511d46a7d2ff699"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a05439bd432881a570511d46a7d2ff699">check_no_activity</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a05439bd432881a570511d46a7d2ff699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all the is system active.  <a href="fsm__retina_8c.html#a05439bd432881a570511d46a7d2ff699">More...</a><br /></td></tr>
+<tr class="separator:a05439bd432881a570511d46a7d2ff699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7660e69573bbf3e75ac151864e165b0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#ae7660e69573bbf3e75ac151864e165b0">do_send_next_msg</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:ae7660e69573bbf3e75ac151864e165b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transmit the next code stored in memory after a short button press.  <a href="fsm__retina_8c.html#ae7660e69573bbf3e75ac151864e165b0">More...</a><br /></td></tr>
 <tr class="separator:ae7660e69573bbf3e75ac151864e165b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +172,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a5f95fb7d2a6655ee7897d0506a294994"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a5f95fb7d2a6655ee7897d0506a294994">do_discard_rx_and_reset</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
 <tr class="memdesc:a5f95fb7d2a6655ee7897d0506a294994"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard and reset the code of the infrared receiver FSM.  <a href="fsm__retina_8c.html#a5f95fb7d2a6655ee7897d0506a294994">More...</a><br /></td></tr>
 <tr class="separator:a5f95fb7d2a6655ee7897d0506a294994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4ce0528a8d396a267bad88a75cda92"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a3d4ce0528a8d396a267bad88a75cda92">do_sleep</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_this)</td></tr>
+<tr class="memdesc:a3d4ce0528a8d396a267bad88a75cda92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the low power mode.  <a href="fsm__retina_8c.html#a3d4ce0528a8d396a267bad88a75cda92">More...</a><br /></td></tr>
+<tr class="separator:a3d4ce0528a8d396a267bad88a75cda92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d4ef2b3a0373ab4b75446647ef74640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fsm__retina_8c.html#a0d4ef2b3a0373ab4b75446647ef74640">fsm_retina_new</a> (<a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_button, uint32_t button_press_time, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_tx, <a class="el" href="structfsm__t.html">fsm_t</a> *p_fsm_rx, uint8_t rgb_id)</td></tr>
 <tr class="memdesc:a0d4ef2b3a0373ab4b75446647ef74640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new RETINA FSM.  <a href="fsm__retina_8c.html#a0d4ef2b3a0373ab4b75446647ef74640">More...</a><br /></td></tr>
 <tr class="separator:a0d4ef2b3a0373ab4b75446647ef74640"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -212,6 +225,10 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5848938303e25699b5ace927ac68cdcfa7bc7af0ae548dcff8d0bd8eb7e6c8308"></a>WAIT_RX&#160;</td><td class="fielddoc"><p><b>State added in Version 3</b>. State to wait in reception mode </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a5848938303e25699b5ace927ac68cdcfa1ed7efe6469eb2a449a2ff9d22f6fc9e"></a>SLEEP_TX&#160;</td><td class="fielddoc"><p><b>State added in Version 4</b>. State to check inactivity in transmission mode </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5848938303e25699b5ace927ac68cdcfa23afc23f75cb4a787e0ed942ed2ee6f8"></a>SLEEP_RX&#160;</td><td class="fielddoc"><p><b>State added in Version 4</b>. State to check inactivity in reception mode </p>
+</td></tr>
 </table>
 
 </div>
@@ -257,6 +274,51 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a91c31f180f16c2d66ef56e62004c83bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91c31f180f16c2d66ef56e62004c83bc">&#9670;&nbsp;</a></span>check_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_activity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if any of the elements of the system is active. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__button_8h.html#af21f21b549567572df95fbe18f29b57c" title="Check if the button FSM is active, or not.">fsm_button_check_activity()</a></code>, retrieve the activity status of the button. <br  />
+✅ 2. Call function <code><a class="el" href="fsm__tx_8h.html#ab22a966071815b96ca4761b99280d558" title="Check if the transmitter FSM is active, or not. As the system is the one controlling the output (PWM ...">fsm_tx_check_activity()</a></code>, retrieve the activity status of the transmitter. <br  />
+✅ 3. Call function <code><a class="el" href="fsm__rx_8h.html#ac2f770018dfb0d38c2bb0b1978412457" title="Check if the receiver FSM is active, or not.">fsm_rx_check_activity()</a></code>, retrieve the activity status of the receiver. <br  />
+✅ 4. Return <code>true</code> if any of the elements is active, otherwise return <code>false</code> . <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
@@ -375,6 +437,48 @@ false </dd></dl>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Call function <code><a class="el" href="fsm__button_8h.html#adf1e6388ab7f1216269fe912a11cf814" title="Return the duration of the last button press.">fsm_button_get_duration()</a></code> and retrieve the duration. <br  />
 ✅ 2. Return <code>true</code> if the duration is not '0' and it is higher or equal than the value stored in <code>long_button_press_ms</code>. Otherwise, return <code>false</code>. </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
+</div>
+</div>
+<a id="a05439bd432881a570511d46a7d2ff699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05439bd432881a570511d46a7d2ff699">&#9670;&nbsp;</a></span>check_no_activity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool check_no_activity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if all the is system active. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="fsm__retina_8c.html#a91c31f180f16c2d66ef56e62004c83bc" title="Check if any of the elements of the system is active.">check_activity()</a></code> and return the inverse of the result. The result will be <code>true</code> if all the elements of the system are inactive, otherwise it will be <code>false</code>. <br  />
+</p>
 </blockquote>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -675,6 +779,45 @@ false </dd></dl>
 
 </div>
 </div>
+<a id="a3d4ce0528a8d396a267bad88a75cda92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4ce0528a8d396a267bad88a75cda92">&#9670;&nbsp;</a></span>do_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void do_sleep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfsm__t.html">fsm_t</a> *&#160;</td>
+          <td class="paramname"><em>p_this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Start the low power mode. </p>
+<blockquote class="doxtable">
+<p><b>TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Call function <code><a class="el" href="port__system_8h.html#ae3c6ff19d65f5cdeb1e1b556b0823b40" title="Enable low power consumption in sleep mode.">port_system_sleep()</a></code>. <br  />
+</p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_this</td><td>Pointer to an <code><a class="el" href="structfsm__t.html" title="Structure that defines a state machine.">fsm_t</a></code> struct than contains an <code><a class="el" href="structfsm__retina__t.html" title="Structure to define the Retina FSM.">fsm_retina_t</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="afa65b37d943170fb5357a1f6de4c4d1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa65b37d943170fb5357a1f6de4c4d1f">&#9670;&nbsp;</a></span>do_tx_off_rx_on()</h2>
 
@@ -892,7 +1035,7 @@ false </dd></dl>
  </blockquote>
 <p><br  />
 </p><blockquote class="doxtable">
-<p><b>The complete FSM Retina is like follows</b>: <br  />
+<p><b>In Version 4 the complete FSM Retina is like follows</b>: <br  />
 </p><div class="image">
 <img src="fsm_retina.png" alt=""/>
 </div>

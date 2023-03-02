@@ -12,6 +12,7 @@ var fsm__tx_8h =
     [ "NEC_TX_SYM_1_TICKS_ON", "fsm__tx_8h.html#a6d087692fac4d84841afe4e20218f0fc", null ],
     [ "NEC_TX_TIMER_TICK_BASE_US", "fsm__tx_8h.html#ae9d591eb1246aa54fb81895171ee85b7", null ],
     [ "fsm_send_NEC_code", "fsm__tx_8h.html#a8345283baebe4201a8d28384880fd105", null ],
+    [ "fsm_tx_check_activity", "fsm__tx_8h.html#ab22a966071815b96ca4761b99280d558", null ],
     [ "fsm_tx_init", "fsm__tx_8h.html#ab6e752ce58e13cce38506f4a86fc229b", null ],
     [ "fsm_tx_new", "fsm__tx_8h.html#af495cd84ebd2efbd1420c458f34699b9", null ],
     [ "fsm_tx_set_code", "fsm__tx_8h.html#a2b5ff29c5e73b66861fc6180f1102da8", null ]

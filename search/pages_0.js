@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sdg2_651',['SDG2',['../index.html',1,'']]]
+  ['sdg2_675',['SDG2',['../index.html',1,'']]]
 ];
