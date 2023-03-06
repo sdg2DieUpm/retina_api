@@ -392,6 +392,7 @@ false </dd></dl>
 <img src="flow_chart_send_nec_code.png" alt=""/>
 </div>
  </blockquote>
+<dl class="section note"><dt>Note</dt><dd>The macro <a class="el" href="fsm__tx_8h.html#a4af4ccc200839eb817a5038f50677339">NEC_TX_EPILOGUE_TICKS_OFF</a> has an arbitrary value because we are not considering the transmission of repetition frames. This value freezes the transmission for <em>200 ms</em> approximately. This being the case, we can only send roughly 5 messages per second if we are fast enough by pressing the user button. <b>If you are going to implement an improvement in your project to send repetition frames, you will have to adapt this value accordingly to the NEC protocol.</b></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tx_id</td><td>Unique infrared transmitter identifier number </td></tr>
