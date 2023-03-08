@@ -426,7 +426,7 @@ false </dd></dl>
 <p><b>TO-DO alumnos:</b></p>
 <p>✅ 1. Initialize the field <code>tx_id</code> of <code>p_fsm</code> with the received value <br  />
 ✅ 2. Initialize the field <code>code</code> of <code>p_fsm</code> with its initial value <br  />
-✅ 3. Call function <code><a class="el" href="port__tx_8h.html#ac51d84674ffc60774e009d161edfae9c" title="Configure the HW specifications of a given infrared transmitter.">port_tx_init()</a></code> </p>
+✅ 3. Call function <code><a class="el" href="port__tx_8h.html#ac51d84674ffc60774e009d161edfae9c" title="Configure the HW specifications of a given infrared transmitter.">port_tx_init()</a></code> setting the <code>status</code> to <code>false</code> in order to not enable the PWM timer. </p>
 </blockquote>
 <dl class="section note"><dt>Note</dt><dd>The main program and the <code>port</code> are the only ones that manage and stablish the ID. The infrared transmitter FSM acts as a man-in-the-middle but this library does not handles the transmitters IDs.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
