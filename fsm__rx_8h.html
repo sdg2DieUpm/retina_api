@@ -293,11 +293,12 @@ false if the NEC code received din not indicate a repetition </dd></dl>
 <p>This function initializes the default values of the FSM struct and calls to the <code>port</code> to initialize the HW of associated to the given ID.</p>
 <blockquote class="doxtable">
 <p><b>TO-DO alumnos:</b></p>
-<p>✅ 1. Initialize the field <code>rx_id</code> of <code>p_fsm</code> with the received value. <br  />
-✅ 2. Initialize the fields <code>code</code>, <code>num_edges_detected</code>, and <code>last_tick</code> of <code>p_fsm</code> with <code>0</code>. <br  />
-✅ 3. Initialize the fields <code>is_repetition</code> and <code>is_error</code> as <code>false</code>, and <code>status</code> as <code>true</code>. <br  />
-✅ 4. Initialize the field <code>message_timeout_ms</code> with the correct value <b>in milliseconds</b>. You might use the macro <a class="el" href="fsm__rx__nec_8h.html#ac482cc349c8b62397b55822cbe96fe8f">NEC_MESSAGE_TIMEOUT_US</a>. <br  />
-✅ 5. Call function <code><a class="el" href="port__rx_8h.html#a5ef09693179985ae45e7ff87831701cf" title="Configure the HW specifications of a given infrared receiver.">port_rx_init()</a></code> </p>
+<p>✅ 1. Call function <code><a class="el" href="fsm_8h.html#aee4d00cd2b36015dfbe8ab3eb02a7d7a" title="Create a new state machine from a table of transitions.">fsm_init()</a></code>. <br  />
+✅ 2. Initialize the field <code>rx_id</code> of <code>p_fsm</code> with the received value. <br  />
+✅ 3. Initialize the fields <code>code</code>, <code>num_edges_detected</code>, and <code>last_tick</code> of <code>p_fsm</code> with <code>0</code>. <br  />
+✅ 4. Initialize the fields <code>is_repetition</code> and <code>is_error</code> as <code>false</code>, and <code>status</code> as <code>true</code>. <br  />
+✅ 5. Initialize the field <code>message_timeout_ms</code> with the correct value <b>in milliseconds</b>. You might use the macro <a class="el" href="fsm__rx__nec_8h.html#ac482cc349c8b62397b55822cbe96fe8f">NEC_MESSAGE_TIMEOUT_US</a>. <br  />
+✅ 6. Call function <code><a class="el" href="port__rx_8h.html#a5ef09693179985ae45e7ff87831701cf" title="Configure the HW specifications of a given infrared receiver.">port_rx_init()</a></code> </p>
 </blockquote>
 <dl class="section note"><dt>Note</dt><dd>The main program and the <code>port</code> are the only ones that manage and stablish the ID. The infrared receiver FSM acts as a man-in-the-middle but this library does not handles the receivers IDs.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
