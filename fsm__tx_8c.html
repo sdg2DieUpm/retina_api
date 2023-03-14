@@ -425,7 +425,7 @@ false </dd></dl>
 <p>✅ 1. Return <code>false</code>. <br  />
  </p>
 </blockquote>
-<dl class="section attention"><dt>Attention</dt><dd><b>If you do not use the input argument the compiler fails giving an error of "unused variable".</b> You might use this variable in many ways in order to return <code>false</code>. It is up to you how you do it. <br  />
+<dl class="section attention"><dt>Attention</dt><dd><b>If you do not use the input argument the compiler might raise an error of "unused variable".</b> You might use this variable in many ways in order to return <code>false</code>. It is up to you how you do it. <br  />
 &#160;&#160;&#160;&#160;💡 <em>e.g.</em> you can check that the current state of the FSM <b>is not</b> <code>WAIT_TX</code> (this will return false because the FSM is always in this state). <br  />
 &#160;&#160;&#160;&#160;💡 <em>e.g.</em> you can create a new field in the FSM struct to indicate the status (which will be always <code>false</code>), and then return this value. <br  />
 &#160;&#160;&#160;&#160;💡 ...</dd></dl>
