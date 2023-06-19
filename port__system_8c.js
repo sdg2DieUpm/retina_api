@@ -13,6 +13,7 @@ var port__system_8c =
     [ "port_system_gpio_toggle", "port__system_8c.html#ac917b3dece5f90ce4c76aaa36cec3553", null ],
     [ "port_system_gpio_write", "port__system_8c.html#a7bc1d118b9ff134fe7f982a52b6a4049", null ],
     [ "port_system_init", "port__system_8c.html#a128d80ffebb4b4feadb28e757ac257cc", null ],
+    [ "port_system_power_sleep", "port__system_8c.html#a2f12a1509a5dbbfa74283bfe22464be5", null ],
     [ "port_system_power_stop", "port__system_8c.html#a074aef083dd161b065792c32eac436dc", null ],
     [ "port_system_sleep", "port__system_8c.html#a92076810565c6eb7703e32ae44a5858d", null ],
     [ "port_system_systick_resume", "port__system_8c.html#a9e8de493a73a0358c667112dd67b073f", null ],

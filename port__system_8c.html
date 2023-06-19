@@ -114,6 +114,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a074aef083dd161b065792c32eac436dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8c.html#a074aef083dd161b065792c32eac436dc">port_system_power_stop</a> ()</td></tr>
 <tr class="memdesc:a074aef083dd161b065792c32eac436dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system in <b>stop mode</b> for low power consumption.  <a href="port__system_8c.html#a074aef083dd161b065792c32eac436dc">More...</a><br /></td></tr>
 <tr class="separator:a074aef083dd161b065792c32eac436dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f12a1509a5dbbfa74283bfe22464be5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8c.html#a2f12a1509a5dbbfa74283bfe22464be5">port_system_power_sleep</a> ()</td></tr>
+<tr class="memdesc:a2f12a1509a5dbbfa74283bfe22464be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system in <b>sleep mode</b> for low power consumption.  <a href="port__system_8c.html#a2f12a1509a5dbbfa74283bfe22464be5">More...</a><br /></td></tr>
+<tr class="separator:a2f12a1509a5dbbfa74283bfe22464be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92076810565c6eb7703e32ae44a5858d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="port__system_8c.html#a92076810565c6eb7703e32ae44a5858d">port_system_sleep</a> ()</td></tr>
 <tr class="memdesc:a92076810565c6eb7703e32ae44a5858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable low power consumption in sleep mode.  <a href="port__system_8c.html#a92076810565c6eb7703e32ae44a5858d">More...</a><br /></td></tr>
 <tr class="separator:a92076810565c6eb7703e32ae44a5858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -797,6 +800,40 @@ AFRHy: Alternate function selection for port x pin y (y = 8..15)</dd></dl>
 
 </div>
 </div>
+<a id="a2f12a1509a5dbbfa74283bfe22464be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f12a1509a5dbbfa74283bfe22464be5">&#9670;&nbsp;</a></span>port_system_power_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void port_system_power_sleep </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the system in <b>sleep mode</b> for low power consumption. </p>
+<p>The function sets the state of the power regulator in <b>sleep mode</b>. <br  />
+After that, the function sets the system mode in sleep mode, to enter in <b>sleep mode</b> when calling <code>_WFI()</code> (wait for interruption). <br  />
+The system remains in this line until an external interruption or timer interruption occurs. <br  />
+ </p><blockquote class="doxtable">
+<p><b>ONLY IF YOU NEED IT! TO-DO alumnos Version 4:</b></p>
+<p>✅ 1. Copy the following code in the file <a class="el" href="port__system_8c.html">port_system.c</a>. <br  />
+</p>
+</blockquote>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system_power_sleep</a>()</div>
+<div class="line">{</div>
+<div class="line"> MODIFY_REG(PWR-&gt;CR, (PWR_CR_PDDS | PWR_CR_LPDS), PWR_CR_LPDS);   <span class="comment">// Select the regulator state in Stop mode: Set PDDS and LPDS bits according to PWR_Regulator value</span></div>
+<div class="line"> SCB-&gt;SCR &amp;= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);   <span class="comment">// Reset SLEEPDEEP bit of Cortex System Control Register</span></div>
+<div class="line"> __WFI(); <span class="comment">// Select Sleep mode entry : Request Wait For Interrupt</span></div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
 <a id="a074aef083dd161b065792c32eac436dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a074aef083dd161b065792c32eac436dc">&#9670;&nbsp;</a></span>port_system_power_stop()</h2>
 
@@ -826,7 +863,7 @@ If an interruption occurs the system wakes up and resets the system mode.</p>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> <a class="code" href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a>()</div>
 <div class="line">{</div>
 <div class="line"> MODIFY_REG(PWR-&gt;CR, (PWR_CR_PDDS | PWR_CR_LPDS), PWR_CR_LPDS);   <span class="comment">// Select the regulator state in Stop mode: Set PDDS and LPDS bits according to PWR_Regulator value</span></div>
-<div class="line">  SCB-&gt;SCR |= ((uint32_t)SCB_SCR_SLEEPDEEP_Msk);   <span class="comment">// Set SLEEPDEEP bit of Cortex System Control Register</span></div>
+<div class="line"> SCB-&gt;SCR |= ((uint32_t)SCB_SCR_SLEEPDEEP_Msk);   <span class="comment">// Set SLEEPDEEP bit of Cortex System Control Register</span></div>
 <div class="line"> __WFI(); <span class="comment">// Select Stop mode entry : Request Wait For Interrupt</span></div>
 <div class="line"> SCB-&gt;SCR &amp;= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk); <span class="comment">// Reset SLEEPDEEP bit of Cortex System Control Register</span></div>
 <div class="line">}</div>
@@ -1067,9 +1104,10 @@ If an interruption occurs the system wakes up and resets the system mode.</p>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aport__system_8h_html_af3c45ccd0a549c3d753b752b726a795f"><div class="ttname"><a href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a></div><div class="ttdeci">void port_system_systick_suspend(void)</div><div class="ttdoc">Suspend Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:176</div></div>
+<div class="ttc" id="aport__system_8h_html_af3c45ccd0a549c3d753b752b726a795f"><div class="ttname"><a href="port__system_8h.html#af3c45ccd0a549c3d753b752b726a795f">port_system_systick_suspend</a></div><div class="ttdeci">void port_system_systick_suspend(void)</div><div class="ttdoc">Suspend Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:189</div></div>
 <div class="ttc" id="aport__system_8h_html_a9ba4258bf8d3fa567f2bb0d6c43029a2"><div class="ttname"><a href="port__system_8h.html#a9ba4258bf8d3fa567f2bb0d6c43029a2">port_system_power_stop</a></div><div class="ttdeci">void port_system_power_stop(void)</div><div class="ttdoc">Set the system in stop mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:122</div></div>
-<div class="ttc" id="aport__system_8h_html_a2dca6b2c8ee48c36828b323f42c47fc8"><div class="ttname"><a href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a></div><div class="ttdeci">void port_system_systick_resume(void)</div><div class="ttdoc">Resume Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:171</div></div>
+<div class="ttc" id="aport__system_8h_html_a5dcdf1cde8372fa1893e1c8f2baf6e55"><div class="ttname"><a href="port__system_8h.html#a5dcdf1cde8372fa1893e1c8f2baf6e55">port_system_power_sleep</a></div><div class="ttdeci">void port_system_power_sleep(void)</div><div class="ttdoc">Set the system in sleep mode for low power consumption.</div><div class="ttdef"><b>Definition:</b> port_system.c:137</div></div>
+<div class="ttc" id="aport__system_8h_html_a2dca6b2c8ee48c36828b323f42c47fc8"><div class="ttname"><a href="port__system_8h.html#a2dca6b2c8ee48c36828b323f42c47fc8">port_system_systick_resume</a></div><div class="ttdeci">void port_system_systick_resume(void)</div><div class="ttdoc">Resume Tick increment.</div><div class="ttdef"><b>Definition:</b> port_system.c:184</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
